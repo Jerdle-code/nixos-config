@@ -23,21 +23,13 @@
       lmms
       hydrogen
       gnubg
-      brightnessctl
-      gammastep
-      nwg-look
-      keepassxc
       dconf-editor
-      networkmanagerapplet
       wvkbd
       webcamoid
       praat
       pavucontrol
-      avizo
       pamixer
-      mako
       pandoc
-      wofi
       python3
       inkscape
       crystal-dock

@@ -7,6 +7,7 @@
       ./plasma.nix
       ./gnome.nix
       ./wayfire.nix
+      ./none.nix
     ];
     local.daniel.desktop.plasma.enable = true;
 }
