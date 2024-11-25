@@ -3,7 +3,6 @@
 {
   imports =
     [
-      ./private.nix
       ./packages.nix
       ./config.nix
     ];
