@@ -2,7 +2,7 @@
 {
   options = {
     local.daniel.desktop.none.enable = lib.mkEnableOption ''
-      Customised GNOME Shell desktop.
+      WM only.
     '';
   };
   config = lib.mkIf config.local.daniel.desktop.none.enable {
@@ -25,6 +25,7 @@
         height = 300;
         width = 500;
     };
+    local.daniel.program.waybar.enable = true;
     home-manager.users.daniel.home.packages = (with pkgs; [
         wofi
         mako
