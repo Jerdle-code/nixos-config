@@ -26,7 +26,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.daniel = import daniel/default.nix;
-	    home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+            home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
           }
