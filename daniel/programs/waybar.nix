@@ -1,8 +1,5 @@
 { config, pkgs, lib, ... }:
 {
-imports = [
-./waybar.nix
-];
   options = {
     local.daniel.program.waybar.enable = lib.mkEnableOption ''
       Customised Waybar setup.

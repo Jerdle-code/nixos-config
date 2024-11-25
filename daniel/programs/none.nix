@@ -1,5 +1,8 @@
 { config, pkgs, lib, ... }:
 {
+imports = [
+./waybar.nix
+];
   options = {
     local.daniel.desktop.none.enable = lib.mkEnableOption ''
       WM only.
