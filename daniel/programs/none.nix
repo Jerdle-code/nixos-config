@@ -28,7 +28,6 @@ imports = [
         height = 300;
         width = 500;
     };
-    local.daniel.program.waybar.enable = true;
     home-manager.users.daniel.home.packages = (with pkgs; [
         wofi
         mako

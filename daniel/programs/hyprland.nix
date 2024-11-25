@@ -3,6 +3,7 @@
   imports =
     [
       ./none.nix
+      ./waybar.nix
     ];
   options = {
     local.daniel.desktop.hyprland.enable = lib.mkEnableOption ''
@@ -12,6 +13,7 @@
   config = lib.mkIf config.local.daniel.desktop.hyprland.enable {
   programs.hyprland.enable = true;
   local.daniel.desktop.none.enable = true;
+  local.daniel.program.waybar.enable = true;
   home-manager.users.daniel.wayland.windowManager.hyprland = {
     enable = true;
     settings = {
