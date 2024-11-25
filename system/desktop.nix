@@ -4,7 +4,10 @@
   services.xserver.enable = true;
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
-  services.displayManager.sddm.enable = true;
+  services.xserver.displayManager.lightdm = {
+  enable = true;
+  greeters.lomiri.enable = true;
+  };
 hardware.graphics.extraPackages = with pkgs; [
   rocmPackages.clr.icd
 ];
