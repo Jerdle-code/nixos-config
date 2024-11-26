@@ -54,10 +54,10 @@
     dolphin
     ark
 ]) ++ (map (p: pkgs.callPackage ("../packages/" + p + "/package.nix") {}) [
-e17gtk-revolved
-darkcold-plasma6-theme
-darkcold-kvantum-theme
-darkcold-gtk-theme
+"e17gtk-revolved"
+"darkcold-plasma6-theme"
+"darkcold-kvantum-theme"
+"darkcold-gtk-theme"
 ]);
   programs.zsh = {
     enable = true;
