@@ -53,11 +53,11 @@
     plasmatube
     dolphin
     ark
-]) ++ ([
-(pkgs.callPackage ../packages/e17gtk-revolved/package.nix {})
-(pkgs.callPackage ../packages/darkcold-plasma6-theme/package.nix {})
-(pkgs.callPackage ../packages/darkcold-kvantum-theme/package.nix {})
-(pkgs.callPackage ../packages/darkcold-gtk-theme/package.nix {})
+]) ++ ((map p: pkgs.callPackage ("../packages/" + p + "/package.nix") {}) [
+e17gtk-revolved
+darkcold-plasma6-theme
+darkcold-kvantum-theme
+darkcold-gtk-theme
 ]);
   programs.zsh = {
     enable = true;
