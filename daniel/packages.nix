@@ -58,6 +58,7 @@
 "darkcold-plasma6-theme"
 "darkcold-kvantum-theme"
 "darkcold-gtk-theme"
+"crystal-remix-icon-theme"
 ]);
   programs.zsh = {
     enable = true;
