@@ -6,7 +6,7 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
   services.xserver.displayManager.lightdm = {
   enable = true;
-  greeters.gtk.enable = true;
+  greeters.slick.enable = true;
   };
 hardware.graphics.extraPackages = with pkgs; [
   rocmPackages.clr.icd

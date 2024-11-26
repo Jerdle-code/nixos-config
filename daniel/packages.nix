@@ -55,6 +55,7 @@
     ark
 ]) ++ ([
 (pkgs.callPackage ../packages/e17gtk-revolved/package.nix {})
+(pkgs.callPackage ../packages/darkcold-plasma6-theme/package.nix {})
 ]);
   programs.zsh = {
     enable = true;
