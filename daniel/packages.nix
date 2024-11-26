@@ -34,6 +34,7 @@
       inkscape
       crystal-dock
       thunderbird
+      libreoffice-still
     ])
     ++
     (with pkgs.kdePackages; [
@@ -49,7 +50,6 @@
     kolourpaint
     gwenview
     kate
-    calligra
     plasmatube
     dolphin
     ark
