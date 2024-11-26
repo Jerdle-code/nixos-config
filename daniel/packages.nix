@@ -56,6 +56,8 @@
 ]) ++ ([
 (pkgs.callPackage ../packages/e17gtk-revolved/package.nix {})
 (pkgs.callPackage ../packages/darkcold-plasma6-theme/package.nix {})
+(pkgs.callPackage ../packages/darkcold-kvantum-theme/package.nix {})
+(pkgs.callPackage ../packages/darkcold-gtk-theme/package.nix {})
 ]);
   programs.zsh = {
     enable = true;
