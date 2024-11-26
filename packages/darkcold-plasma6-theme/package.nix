@@ -17,6 +17,7 @@ stdenv.mkDerivation rec {
     installPhase = ''
     mkdir -p $out/share/plasma/desktoptheme/darkcold
     cp -va plasma/plasma6darkcold/* $out/share/plasma/desktoptheme/darkcold/
+    cp -va plasma/plasma6darkcold/colors $out/share/color-schemes/DarkCold.colors
   '';
 
   meta = {
