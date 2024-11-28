@@ -34,7 +34,7 @@
       inkscape
       crystal-dock
       thunderbird
-      libreoffice-still
+      libreoffice-fresh
     ])
     ++
     (with pkgs.kdePackages; [
