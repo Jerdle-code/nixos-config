@@ -35,6 +35,7 @@
       crystal-dock
       thunderbird
       libreoffice-fresh
+      maxima
     ])
     ++
     (with pkgs.kdePackages; [
