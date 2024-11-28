@@ -17,7 +17,7 @@
       texstudio
       openrct2
       audacity
-      gimp
+      gimp-with-plugins
       protontricks
       musescore
       lmms
