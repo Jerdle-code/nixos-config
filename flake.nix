@@ -15,7 +15,7 @@
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, plasma-manager, ... }@inputs: {
     # Please replace my-nixos with your hostname
-    nixosConfigurations.Jeskai = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.Jeskai = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
       specialArgs = {
             pkgs-unstable = import nixpkgs-unstable {
