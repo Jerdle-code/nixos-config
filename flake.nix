@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager = {
@@ -12,10 +13,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, plasma-manager, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.Jeskai = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+      specialArgs = {
+            pkgs-unstable = import nixpkgs-unstable {
+              inherit system;
+            };
+      };
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
