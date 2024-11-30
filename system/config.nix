@@ -10,7 +10,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
     hardware.pulseaudio.enable = false;
-  system.autoUpgrade.enable  = true;
   services.logind.lidSwitch = "ignore";
    services.printing.enable = true;
 
