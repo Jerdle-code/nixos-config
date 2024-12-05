@@ -44,6 +44,13 @@
       options = [ "subvol=@flatpak" "compress=zstd" "noatime"];
     };
 
+      fileSystems."/home/daniel/.local/share/docker/" =
+    { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
+      fsType = "btrfs";
+      options = [ "subvol=@docker" "compress=zstd" "noatime"];
+    };
+
+
   fileSystems."/boot/efi" =
     { device = "/dev/disk/by-uuid/B440-FE4B";
       fsType = "vfat";
