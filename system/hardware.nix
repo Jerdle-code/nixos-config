@@ -20,6 +20,12 @@
       options = [ "subvol=@" "compress=zstd" ];
     };
 
+    fileSystems."/fs" =
+    { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
+      fsType = "btrfs";
+      options = [ "compress=zstd" ];
+    };
+
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
       fsType = "btrfs";
@@ -30,6 +36,12 @@
     { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
       fsType = "btrfs";
       options = [ "subvol=@nix" "compress=zstd" "noatime"];
+    };
+
+  fileSystems."/var/lib/flatpak" =
+    { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
+      fsType = "btrfs";
+      options = [ "subvol=@flatpak" "compress=zstd" "noatime"];
     };
 
   fileSystems."/boot/efi" =
