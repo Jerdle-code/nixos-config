@@ -4,7 +4,7 @@
   services.xserver.enable = true;
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
-  services.xserver.displayManager.sddm = {
+  services.displayManager.sddm = {
   enable = true;
 
   };
