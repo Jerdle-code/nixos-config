@@ -38,6 +38,7 @@ imports = [
         networkmanagerapplet
         nwg-look
         keepassxc
+	swaybg
       ]);
   };
 }
