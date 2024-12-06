@@ -54,6 +54,7 @@
     plasmatube
     dolphin
     ark
+    karousel
 ]) ++ (map (p: pkgs.callPackage (./. + "/../packages" + ("/" + p)  + "/package.nix") {}) [
 "e17gtk-revolved"
 "darkcold-plasma6-theme"
