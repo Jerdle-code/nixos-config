@@ -4,9 +4,9 @@
   services.xserver.enable = true;
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
-  services.xserver.displayManager.lightdm = {
+  services.xserver.displayManager.sddm = {
   enable = true;
-  greeters.slick.enable = true;
+
   };
 hardware.graphics.extraPackages = with pkgs; [
   rocmPackages.clr.icd
