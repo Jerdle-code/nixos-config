@@ -11,5 +11,4 @@
       ./niri.nix
     ];
     local.daniel.desktop.plasma.enable = true;
-    local.daniel.desktop.niri.enable = true;
 }
