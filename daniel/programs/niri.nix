@@ -10,7 +10,7 @@
       Customised Niri desktop.
     '';
   };
-  config = lib.mkIf config.local.daniel.desktop.wayfire.enable {
+  config = lib.mkIf config.local.daniel.desktop.niri.enable {
     programs.niri.enable = true;
     local.daniel.program.waybar.enable = true;
     local.daniel.desktop.none.enable = true;
