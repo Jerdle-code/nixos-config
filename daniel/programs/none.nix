@@ -30,6 +30,7 @@ imports = [
     };
     home-manager.users.daniel.home.packages = (with pkgs; [
         wofi
+        fuzzel
         mako
         avizo
         brightnessctl

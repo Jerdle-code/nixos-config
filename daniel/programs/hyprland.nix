@@ -64,7 +64,6 @@
         "nm-applet"
         "keepassxc --keyfile $HOME/FDO $HOME/FDO.kdbx"
         "gammastep"
-        "wvkbd-mobintl"
         "waybar"
         "avizo-service"
         "mako"
