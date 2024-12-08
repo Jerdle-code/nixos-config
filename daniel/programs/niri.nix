@@ -14,5 +14,8 @@
     programs.niri.enable = true;
     local.daniel.program.waybar.enable = true;
     local.daniel.desktop.none.enable = true;
+    home-manager.users.daniel.home.packages = (with pkgs; [
+      xwayland-satellite
+    ]);
   };
 }
