@@ -55,10 +55,17 @@
     dolphin
     ark
     karousel
-]) ++ lib.packagesFromDirectoryRecursive{
+]) ++ (with lib.packagesFromDirectoryRecursive{
 inherit (pkgs) callPackage;
 directory = ./. + "/../packages";
 };
+[
+crystal-remix-icon-theme
+darkcold-gtk-theme
+darkcold-kvantum-theme
+darkcold-plasma6-theme
+e17gtk-revolved
+]);
   programs.zsh = {
     enable = true;
     initExtra = "fastfetch";
