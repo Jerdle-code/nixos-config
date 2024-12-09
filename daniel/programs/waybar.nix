@@ -16,19 +16,20 @@
     "spacing" = 4;
     "modules-left" = [
     	"keyboard-state"
-	"cpu"
-        "memory"
-        "temperature"
-];
+    ];
     "modules-center" = [
         "clock"
     ];
     "modules-right" = [
         "power-profiles-daemon"
         "backlight"
+	"cpu"
+        "memory"
+        "temperature"
 	"network"
 	"battery"
 	"pulseaudio"
+	"tray"
     ];
     "keyboard-state" = {
         "numlock" = true;
@@ -222,7 +223,10 @@ window#waybar {
     background-color: @bg;
     color: @light;
 }
-
+#keyboard-state {
+    background-color: @dark;
+    color: @light;
+}
 #custom-drawer {
     background-color: @purple;
     color: @light;
