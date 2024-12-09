@@ -8,7 +8,7 @@ users.users = {
       group = "users";
       home = "/home/daniel";
       uid = 1000;
-      extraGroups  = [ "wheel" "networkmanager" "libvirtd" "input"];
+      extraGroups  = [ "wheel" "networkmanager" "libvirtd" "input"  "podman"];
       shell = pkgs.zsh;
    };
 };
