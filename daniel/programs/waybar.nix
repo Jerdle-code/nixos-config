@@ -14,9 +14,6 @@
         "layer" = "top";
     "height" = 30;
     "spacing" = 4;
-    "modules-left" = [
-    	"keyboard-state"
-    ];
     "modules-center" = [
         "clock"
     ];
