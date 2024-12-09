@@ -194,6 +194,7 @@ window#waybar {
 #custom-media,
 #tray,
 #mode,
+#keyboard-state,
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
