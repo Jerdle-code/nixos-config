@@ -1,5 +1,9 @@
 { config, pkgs, lib, ... }:
 {
+custompkgs = lib.packagesFromDirectoryRecursive{
+inherit (pkgs) callPackage;
+directory = ./. + "/../packages";
+};
  #nixpkgs.config.allowUnfree = true;
   home.packages = (with pkgs; [
       firefox
@@ -54,11 +58,7 @@
     plasmatube
     dolphin
     ark
-    karousel
-]) ++ (with lib.packagesFromDirectoryRecursive{
-inherit (pkgs) callPackage;
-directory = ./. + "/../packages";
-};
+]) ++ (with custompkgs;
 [
 crystal-remix-icon-theme
 darkcold-gtk-theme
