@@ -57,7 +57,7 @@
     karousel
 ]) ++ lib.packagesFromDirectoryRecursive{
 inherit (pkgs) callPackage;
-directory = ./packages;
+directory = ./. + "/../packages";
 };
   programs.zsh = {
     enable = true;
