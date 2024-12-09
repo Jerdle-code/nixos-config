@@ -46,7 +46,6 @@
     qtstyleplugin-kvantum
     qt6ct
     konsole
-    yakuake
     kcalc
     okular
     kolourpaint
