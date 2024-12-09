@@ -14,19 +14,21 @@
         "layer" = "top";
     "height" = 30;
     "spacing" = 4;
-     "modules-center" = [
+    "modules-left" = [
+    	"keyboard-state"
+	"cpu"
+        "memory"
+        "temperature"
+];
+    "modules-center" = [
         "clock"
     ];
     "modules-right" = [
         "power-profiles-daemon"
-        "cpu"
-        "memory"
-        "temperature"
         "backlight"
 	"network"
 	"battery"
 	"pulseaudio"
-	"keyboard-state"
     ];
     "keyboard-state" = {
         "numlock" = true;
