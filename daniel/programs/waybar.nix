@@ -14,7 +14,7 @@
         "layer" = "top";
     "height" = 30;
     "spacing" = 4;
-    "modules-center" = [
+     "modules-center" = [
         "clock"
     ];
     "modules-right" = [
@@ -23,6 +23,10 @@
         "memory"
         "temperature"
         "backlight"
+	"network"
+	"battery"
+	"pulseaudio"
+	"keyboard-state"
     ];
     "keyboard-state" = {
         "numlock" = true;
