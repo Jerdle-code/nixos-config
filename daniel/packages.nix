@@ -54,6 +54,7 @@
     plasmatube
     dolphin
     ark
+    discover
 ]) ++ (with lib.packagesFromDirectoryRecursive{
 inherit (pkgs) callPackage;
 directory = ./. + "/../packages";
