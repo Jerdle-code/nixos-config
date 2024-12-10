@@ -22,6 +22,9 @@
       kdePackages.qtwayland
       kdePackages.filelight
       glib #somehow this needs manually installing
+          dive # look into docker image layers
+    podman-tui # status of containers in the terminal
+    podman-compose # start group of containers for dev
   ];
   services.upower.enable=true;
 programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
