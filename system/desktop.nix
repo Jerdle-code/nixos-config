@@ -8,7 +8,7 @@
   enable = true;
   extraPackages = [pkgs.sddm-chili-theme];
   wayland.enable = true;
-  theme = pkgs.sddm-chili-theme;
+  theme = "sddm-chili-theme";
   };
 hardware.graphics.extraPackages = with pkgs; [
   rocmPackages.clr.icd
