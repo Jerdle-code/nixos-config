@@ -235,7 +235,7 @@ background-color: @bg;
 
 #battery {
     background-color: @bg;
-    color: @blue;
+    color: @light;
     border: 2px @blue solid;
 }
 #battery.warning {
