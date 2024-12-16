@@ -220,10 +220,12 @@ window#waybar {
 #clock {
     background-color: @bg;
     color: @light;
+    border: 1px @blue solid;
 }
 #keyboard-state {
-    background-color: @dark;
+    background-color: @bg;
     color: @light;
+    border: 1px @dark solid;
 }
 #custom-drawer {
     background-color: @purple;
@@ -231,34 +233,19 @@ window#waybar {
 }
 
 #battery {
-    background-color: @blue;
-    color: @dark;
+    background-color: @bg;
+    color: @light;
+    border: 1px @blue solid;
 }
 #battery.warning {
-    background-color: @orange;
-    color: @dark;
+    border: 1px @orange solid;
 }
 #battery.charging, #battery.plugged {
-    color: @light;
-    background-color: @green;
+    border: 1px @blue solid;
 }
 
-@keyframes blink {
-    to {
-    background-color: @light;
-    color: @dark;
-    }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: @red;
-    color: @light;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    border: 1px @red solid;
 }
 
 #power-profiles-daemon {
@@ -266,18 +253,15 @@ window#waybar {
 }
 
 #power-profiles-daemon.performance {
-    background-color: @red;
-    color: @light;
+    border: 1px @red solid;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: @blue;
-    color: @light;
+    border: 1px @blue solid;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: @green;
-    color: @dark;
+    border: 1px @green solid;
 }
 
 label:focus {
@@ -285,59 +269,44 @@ label:focus {
 }
 
 #cpu {
-    background-color: @yellow;
-    color: @dark;
+    border: 1px @yellow solid;
 }
 
 #memory {
-    background-color: @yellow;
-    color: @dark;
+    border: 1px @yellow solid;
 }
 
 #disk {
-    background-color: @yellow;
-    color: @dark;
+    border: 1px @yellow solid;
 }
 
 #backlight {
-    background-color: @light;
-    color: @dark;
+    border: 1px @light solid;
 }
 
 #network {
-    background-color: @blue;
+    border: 1px @blue solid;
 }
 
 #network.disconnected {
-    background-color: @red;
+    border: 1px @red solid;
 }
 
 #pulseaudio {
-    background-color: @purple;
-    color: @light;
+    border: 1px @purple solid;
 }
 
 
 #temperature {
-    background-color: @orange;
-    color: @dark;
+    border: 1px @orange solid;
 }
 
 #temperature.critical {
-    background-color: @red;
+    border: 1px @red solid;
 }
 
 #tray {
-    background-color: @blue;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @red;
+    border: 1px @blue solid;
 }";
   };
   };
