@@ -171,7 +171,7 @@
 }
 
 window#waybar {
-    background-color: @bg;
+    background-color: rgba(0,0,0,128);
     border-bottom: 0px solid rgba(100, 114, 125, 0.0);
     color: @light;
     transition-property: background-color;
