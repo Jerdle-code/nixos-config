@@ -235,18 +235,21 @@ background-color: @bg;
 
 #battery {
     background-color: @bg;
-    color: @light;
+    color: @blue;
     border: 2px @blue solid;
 }
 #battery.warning {
     border: 2px @orange solid;
+    color: @orange;
 }
 #battery.charging, #battery.plugged {
-    border: 2px @blue solid;
+    border: 2px @green solid;
+    color: @green;
 }
 
 #battery.critical:not(.charging) {
-    border: 2px @red solid;
+    border: 3px @red solid;
+    color: @red;
 }
 
 #power-profiles-daemon {
@@ -255,14 +258,17 @@ background-color: @bg;
 
 #power-profiles-daemon.performance {
     border: 2px @red solid;
+    color: @red;
 }
 
 #power-profiles-daemon.balanced {
     border: 2px @blue solid;
+    color: @blue;
 }
 
 #power-profiles-daemon.power-saver {
     border: 2px @green solid;
+    color:@green;
 }
 
 label:focus {
