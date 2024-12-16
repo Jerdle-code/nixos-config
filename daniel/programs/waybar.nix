@@ -197,6 +197,7 @@ window#waybar {
 #power-profiles-daemon,
 #custom-drawer,
 #mpd {
+background-color: @bg;
     padding: 0 10px;
     color: @light;
     border-bottom: 0px solid rgba(100, 114, 125, 0.0);
@@ -220,12 +221,12 @@ window#waybar {
 #clock {
     background-color: @bg;
     color: @light;
-    border: 1px @blue solid;
+    border: 2px @blue solid;
 }
 #keyboard-state {
     background-color: @bg;
     color: @light;
-    border: 1px @dark solid;
+    border: 2px @dark solid;
 }
 #custom-drawer {
     background-color: @purple;
@@ -235,17 +236,17 @@ window#waybar {
 #battery {
     background-color: @bg;
     color: @light;
-    border: 1px @blue solid;
+    border: 2px @blue solid;
 }
 #battery.warning {
-    border: 1px @orange solid;
+    border: 2px @orange solid;
 }
 #battery.charging, #battery.plugged {
-    border: 1px @blue solid;
+    border: 2px @blue solid;
 }
 
 #battery.critical:not(.charging) {
-    border: 1px @red solid;
+    border: 2px @red solid;
 }
 
 #power-profiles-daemon {
@@ -253,15 +254,15 @@ window#waybar {
 }
 
 #power-profiles-daemon.performance {
-    border: 1px @red solid;
+    border: 2px @red solid;
 }
 
 #power-profiles-daemon.balanced {
-    border: 1px @blue solid;
+    border: 2px @blue solid;
 }
 
 #power-profiles-daemon.power-saver {
-    border: 1px @green solid;
+    border: 2px @green solid;
 }
 
 label:focus {
@@ -269,44 +270,44 @@ label:focus {
 }
 
 #cpu {
-    border: 1px @yellow solid;
+    border: 2px @yellow solid;
 }
 
 #memory {
-    border: 1px @yellow solid;
+    border: 2px @yellow solid;
 }
 
 #disk {
-    border: 1px @yellow solid;
+    border: 2px @yellow solid;
 }
 
 #backlight {
-    border: 1px @light solid;
+    border: 2px @light solid;
 }
 
 #network {
-    border: 1px @blue solid;
+    border: 2px @blue solid;
 }
 
 #network.disconnected {
-    border: 1px @red solid;
+    border: 2px @red solid;
 }
 
 #pulseaudio {
-    border: 1px @purple solid;
+    border: 2px @purple solid;
 }
 
 
 #temperature {
-    border: 1px @orange solid;
+    border: 2px @orange solid;
 }
 
 #temperature.critical {
-    border: 1px @red solid;
+    border: 2px @red solid;
 }
 
 #tray {
-    border: 1px @blue solid;
+    border: 2px @blue solid;
 }";
   };
   };
