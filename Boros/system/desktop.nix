@@ -6,9 +6,7 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
   services.displayManager.sddm = {
   enable = true;
-  extraPackages = [pkgs.sddm-chili-theme];
   wayland.enable = true;
-  theme = "sddm-chili";
   };
 hardware.graphics.extraPackages = with pkgs; [
   rocmPackages.clr.icd

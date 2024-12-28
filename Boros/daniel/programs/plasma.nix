@@ -9,7 +9,6 @@
     services.desktopManager.plasma6.enable = true;
         home-manager.users.daniel.home.packages = (with pkgs.kdePackages; [
         yakuake
-        karousel
         ]);
   };
 }
