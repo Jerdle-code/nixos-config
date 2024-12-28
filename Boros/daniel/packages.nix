@@ -36,7 +36,6 @@
       thunderbird
       libreoffice-fresh
       maxima
-      podman-desktop
     ])
     ++
     (with pkgs.kdePackages; [
