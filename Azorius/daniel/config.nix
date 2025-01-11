@@ -4,7 +4,6 @@
   home.homeDirectory = "/home/daniel";
   home.sessionVariables = {
     EDITOR = "nano";
-    QT_QPA_PLATFORMTHEME = "kde";
   };
 programs.git = {
     enable = true;

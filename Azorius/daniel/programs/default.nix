@@ -10,5 +10,4 @@
       ./none.nix
       ./niri.nix
     ];
-    local.daniel.desktop.hyprland.enable = true;
 }

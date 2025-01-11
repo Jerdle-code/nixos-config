@@ -5,19 +5,16 @@
   virtualisation.libvirtd.enable = true;
     environment.systemPackages = with pkgs; [
       nix-search-cli
-      mesa-demos
       clinfo
       vulkan-tools
       links2
       tmux
-      virt-manager
       upower
       git
-      kdePackages.qtwayland
       glib #somehow this needs manually installing
-          dive # look into docker image layers
-    podman-tui # status of containers in the terminal
-    podman-compose # start group of containers for dev
+      dive # look into docker image layers
+      podman-tui # status of containers in the terminal
+      podman-compose # start group of containers for dev
   ];
   services.upower.enable=true;
 programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
@@ -58,6 +55,6 @@ virtualisation = {
 
 services.emacs = {
     enable = true;
-    package = pkgs.emacs-gtk;
+    package = pkgs.emacs-nox;
   };
 }

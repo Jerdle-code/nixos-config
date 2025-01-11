@@ -13,17 +13,6 @@
       python3
       podman-desktop
     ])
-    ++
-    (with pkgs.kdePackages; [
-    breeze
-    breeze-gtk
-    breeze-icons
-    qt6ct
-    konsole
-    kcalc
-    kate
-    dolphin
-]);
   programs.zsh = {
     enable = true;
     initExtra = "fastfetch";

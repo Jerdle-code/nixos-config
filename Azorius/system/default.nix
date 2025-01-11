@@ -10,7 +10,6 @@
       ./users.nix
       ./packages.nix
       ./boot.nix
-      ./desktop.nix
       ./config.nix
       ./nix.nix
       ./i18n.nix
