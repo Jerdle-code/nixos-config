@@ -60,9 +60,7 @@
             home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
-             portainer-on-nixos.nixosModules.portainer # use the module
-        # example that shows all default the portainer options
-        {
+             portainer-on-nixos.nixosModules.portainer = {
           services.portainer = {
             enable = true; # Default false
 
