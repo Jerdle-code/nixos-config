@@ -60,7 +60,9 @@
             home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
-             portainer-on-nixos.nixosModules.portainer = {
+          }
+        portainer-on-nixos.nixosModules.portainer
+        {
           services.portainer = {
             enable = true; # Default false
 
@@ -75,8 +77,6 @@
                          # the docker container port mapping itself.
           };
         }
-
-          }
       ];
     };
   };
