@@ -2,9 +2,8 @@
   description = "My Nix config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
@@ -15,15 +14,10 @@
     portainer-on-nixos.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, plasma-manager, portainer-on-nixos, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, portainer-on-nixos, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.Boros = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
-      specialArgs = {
-            pkgs-unstable = import nixpkgs-unstable {
-              inherit system;
-            };
-      };
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
@@ -42,11 +36,6 @@
     };
     nixosConfigurations.Azorius = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
-      specialArgs = {
-            pkgs-unstable = import nixpkgs-unstable {
-              inherit system;
-            };
-      };
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
