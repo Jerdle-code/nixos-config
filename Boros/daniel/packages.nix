@@ -35,6 +35,7 @@
 #      thunderbird
 #      libreoffice-fresh
       maxima
+      krita
     ])
     ++
     (with pkgs.kdePackages; [
@@ -53,7 +54,6 @@
     dolphin
     ark
     discover
-    krita
     calligra
     kwalletmanager
     falkon
