@@ -13,15 +13,12 @@
       links2
       tmux
       jdk21
-      virt-manager
       lxqt.lxqt-openssh-askpass
       lxqt.lxqt-policykit
       upower
-      kdePackages.partitionmanager
       git
       kdePackages.qtwayland
       kdePackages.filelight
-      glib #somehow this needs manually installing
           dive # look into docker image layers
     podman-tui # status of containers in the terminal
     podman-compose # start group of containers for dev
@@ -32,6 +29,7 @@ services.udisks2.enable = true;
 security.polkit.enable = true;
 services.flatpak.enable = true;
 services.gvfs.enable = true;
+programs.partition-manager.enable = true;
   programs.zsh.enable = true;
   services.power-profiles-daemon.enable = true;
   # List services that you want to enable:
@@ -62,9 +60,3 @@ virtualisation = {
     defaultNetwork.settings.dns_enabled = true;
   };
 };
-
-services.emacs = {
-    enable = true;
-    package = pkgs.emacs-gtk;
-  };
-}

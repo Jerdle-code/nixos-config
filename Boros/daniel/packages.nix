@@ -16,7 +16,7 @@
       lyx
       texstudio
       openrct2
-      audacity
+#      audacity
       gimp-with-plugins
       protontricks
       musescore
@@ -31,10 +31,9 @@
       pamixer
       pandoc
       python3
-      inkscape
       crystal-dock
-      thunderbird
-      libreoffice-fresh
+#      thunderbird
+#      libreoffice-fresh
       maxima
     ])
     ++
@@ -54,6 +53,10 @@
     dolphin
     ark
     discover
+    krita
+    calligra
+    kwalletmanager
+    falkon
 ]) ++ (with lib.packagesFromDirectoryRecursive{
 inherit (pkgs) callPackage;
 directory = ./. + "/../packages";
@@ -73,4 +76,12 @@ e17gtk-revolved
         theme = "tjkirch";
     };
   };
+  programs.kde-pim= {
+  enable = true;
+  kmail = true;
+  kontact = true;
+  merkuro = true;
+  };
+  programs.kdeconnect.enable = true;
+  security.pam.services.daniel.kwallet.enable = true;
 }
