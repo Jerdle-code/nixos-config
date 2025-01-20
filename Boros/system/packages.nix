@@ -60,3 +60,4 @@ virtualisation = {
     defaultNetwork.settings.dns_enabled = true;
   };
 };
+}
