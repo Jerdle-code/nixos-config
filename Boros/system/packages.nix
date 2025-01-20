@@ -40,10 +40,9 @@ programs.partition-manager.enable = true;
 fonts.packages = with pkgs; [
    noto-fonts
    lmodern
-   nerdfonts
    font-awesome
    powerline
-];
+] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 #services.fprintd.tod.enable = true;
 
 #services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;

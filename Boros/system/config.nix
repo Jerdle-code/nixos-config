@@ -9,7 +9,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-    hardware.pulseaudio.enable = false;
+    services.pulseaudio.enable = false;
   services.logind.lidSwitch = "ignore";
    services.printing.enable = true;
 
