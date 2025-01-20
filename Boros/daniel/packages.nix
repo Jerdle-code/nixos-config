@@ -76,12 +76,4 @@ e17gtk-revolved
         theme = "tjkirch";
     };
   };
-  programs.kde-pim= {
-  enable = true;
-  kmail = true;
-  kontact = true;
-  merkuro = true;
-  };
-  programs.kdeconnect.enable = true;
-  security.pam.services.daniel.kwallet.enable = true;
 }
