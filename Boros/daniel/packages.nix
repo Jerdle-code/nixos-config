@@ -2,7 +2,6 @@
 {
  #nixpkgs.config.allowUnfree = true;
   home.packages = (with pkgs; [
-      firefox
       (prismlauncher.override { jdks = [ jdk8 jdk17 jdk21 ]; })
       fastfetch
       superTuxKart
@@ -16,7 +15,6 @@
       lyx
       texstudio
       openrct2
-#      audacity
       gimp-with-plugins
       protontricks
       musescore
@@ -32,10 +30,9 @@
       pandoc
       python3
       crystal-dock
-#      thunderbird
-#      libreoffice-fresh
       maxima
       krita
+      brave
     ])
     ++
     (with pkgs.kdePackages; [
@@ -56,7 +53,6 @@
     discover
     calligra
     kwalletmanager
-    falkon
 ]) ++ (with lib.packagesFromDirectoryRecursive{
 inherit (pkgs) callPackage;
 directory = ./. + "/../packages";
