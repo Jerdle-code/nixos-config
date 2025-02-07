@@ -33,6 +33,7 @@
       maxima
       krita
       brave
+      libreoffice-fresh
     ])
     ++
     (with pkgs.kdePackages; [
@@ -51,7 +52,6 @@
     dolphin
     ark
     discover
-    calligra
     kwalletmanager
 ]) ++ (with lib.packagesFromDirectoryRecursive{
 inherit (pkgs) callPackage;
