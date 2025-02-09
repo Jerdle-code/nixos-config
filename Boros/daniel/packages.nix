@@ -30,7 +30,7 @@
       pandoc
       python3
       crystal-dock
-      maxima
+      sage
       krita
       brave
       libreoffice-fresh
