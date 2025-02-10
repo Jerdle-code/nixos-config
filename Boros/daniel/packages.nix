@@ -30,11 +30,11 @@
       pandoc
       python3
       crystal-dock
-      sage
+#      sage
       krita
       brave
       libreoffice-fresh
-      wxmaxima
+#      wxmaxima
       golly
     ])
     ++
