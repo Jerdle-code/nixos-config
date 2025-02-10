@@ -34,6 +34,8 @@
       krita
       brave
       libreoffice-fresh
+      wxmaxima
+      golly
     ])
     ++
     (with pkgs.kdePackages; [
