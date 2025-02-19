@@ -12,7 +12,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, plasma-manager, portainer-on-nixos, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.Boros = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
