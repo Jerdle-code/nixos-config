@@ -4,8 +4,8 @@
   home.homeDirectory = "/home/daniel";
   home.sessionVariables = {
     EDITOR = "nano";
-    QT_QPA_PLATFORMTHEME = "kde";
   };
+  qt.style = "kvantum";
 programs.git = {
     enable = true;
       userName = "Jerdle-code";
