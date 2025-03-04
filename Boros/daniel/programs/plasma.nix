@@ -35,44 +35,24 @@
         location = "top";
         height = 26;
         widgets = [
-          {
-            applicationTitleBar = {
-              behavior = {
-                activeTaskSource = "activeTask";
-              };
-              layout = {
-                elements = [ "windowTitle" ];
-                horizontalAlignment = "left";
-                showDisabledElements = "deactivated";
-                verticalAlignment = "center";
-              };
-              overrideForMaximized.enable = false;
-              windowTitle = {
-                font = {
-                  bold = false;
-                  fit = "fixedSize";
-                  size = 12;
-                };
-                hideEmptyTitle = true;
-                margins = {
-                  bottom = 0;
-                  left = 10;
-                  right = 5;
-                  top = 0;
-                };
-                source = "appName";
-              };
-            };
-          }
+        "org.kde.plasma.windowlist"
           "org.kde.plasma.appmenu"
-          "org.kde.plasma.marginsseparator"
+          {
+          panel-spacer = {
+            expanding = true;
+          };
+          }
           {
             digitalClock = {
               calendar.firstDayOfWeek = "monday";
               time.format = "24h";
             };
           }
-          "org.kde.plasma.marginsseparator"
+          {
+          panel-spacer = {
+            expanding = true;
+          };
+          }
           {
             systemTray.items = {
               shown = [
