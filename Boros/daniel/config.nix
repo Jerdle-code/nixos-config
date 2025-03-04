@@ -5,7 +5,11 @@
   home.sessionVariables = {
     EDITOR = "nano";
   };
-  qt.style = "kvantum";
+  qt = {
+  enable = true;
+  platformTheme = "kde";
+  style = "kvantum";
+};
 programs.git = {
     enable = true;
       userName = "Jerdle-code";
