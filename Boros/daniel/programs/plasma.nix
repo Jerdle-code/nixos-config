@@ -22,10 +22,76 @@
       iconTheme = "crystal-remix";
       wallpaper = "/mnt/data/Documents/nixos-hex-bg.png";
     };
+    hotkeys.commands."launch-konsole" = {
+      name = "Launch Konsole";
+      key = "Meta+Return";
+      command = "konsole";
+    };
     shortcuts = {
-      "services/org.kde.konsole.desktop"."_launch" = ["Ctrl+Alt+T" "Meta+Return"];
       "yakuake"."toggle-window-state" = "F8,F12,Open/Retract Yakuake";
     };
+        panels = [
+      {
+        location = "top";
+        height = 26;
+        widgets = [
+          {
+            applicationTitleBar = {
+              behavior = {
+                activeTaskSource = "activeTask";
+              };
+              layout = {
+                elements = [ "windowTitle" ];
+                horizontalAlignment = "left";
+                showDisabledElements = "deactivated";
+                verticalAlignment = "center";
+              };
+              overrideForMaximized.enable = false;
+              windowTitle = {
+                font = {
+                  bold = false;
+                  fit = "fixedSize";
+                  size = 12;
+                };
+                hideEmptyTitle = true;
+                margins = {
+                  bottom = 0;
+                  left = 10;
+                  right = 5;
+                  top = 0;
+                };
+                source = "appName";
+              };
+            };
+          }
+          "org.kde.plasma.appmenu"
+          "org.kde.plasma.marginsseparator"
+          {
+            digitalClock = {
+              calendar.firstDayOfWeek = "monday";
+              time.format = "24h";
+            };
+          }
+          "org.kde.plasma.marginsseparator"
+          {
+            systemTray.items = {
+              shown = [
+                "org.kde.plasma.battery"
+                "org.kde.plasma.bluetooth"
+                "org.kde.plasma.networkmanagement"
+                "org.kde.plasma.volume"
+              ];
+            };
+          }
+          {
+            kickerdash = {
+              sortAlphabetically = true;
+              icon = "nix-snowflake-white";
+            };
+          }
+        ];
+      }
+    ];
   };
 };
 }
