@@ -7,7 +7,7 @@
   };
   qt = {
   enable = true;
-  platformTheme.name = "kde";
+  platformTheme.name = "qtct";
   style.name = "kvantum";
 };
 programs.git = {
