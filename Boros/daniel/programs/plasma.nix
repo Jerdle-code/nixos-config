@@ -38,7 +38,7 @@
         "org.kde.plasma.windowlist"
           "org.kde.plasma.appmenu"
           {
-          panel-spacer = {
+          spacer = {
             expanding = true;
           };
           }
@@ -49,7 +49,7 @@
             };
           }
           {
-          panel-spacer = {
+          spacer = {
             expanding = true;
           };
           }
