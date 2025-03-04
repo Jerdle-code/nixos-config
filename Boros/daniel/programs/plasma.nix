@@ -27,4 +27,5 @@
       "yakuake"."toggle-window-state" = "F8,F12,Open/Retract Yakuake";
     };
   };
+};
 }
