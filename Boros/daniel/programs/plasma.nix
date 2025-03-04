@@ -85,7 +85,6 @@
           }
           {
             kickerdash = {
-              sortAlphabetically = true;
               icon = "nix-snowflake-white";
             };
           }
