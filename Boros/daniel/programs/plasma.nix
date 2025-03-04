@@ -10,7 +10,7 @@
         home-manager.users.daniel.home.packages = (with pkgs.kdePackages; [
         yakuake
         ]);
-  programs.plasma = {
+ home-manager.users.daniel.programs.plasma = {
     enable = true;
     shortcuts = {
       "services/org.kde.konsole.desktop"."_launch" = ["Ctrl+Alt+T" "Meta+Return"];
