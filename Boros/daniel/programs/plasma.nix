@@ -10,6 +10,11 @@
         home-manager.users.daniel.home.packages = (with pkgs.kdePackages; [
         yakuake
         ]);
+          home-manager.users.daniel.qt = {
+  enable = true;
+  platformTheme.name = "kde";
+  style.name = "kvantum";
+};
  home-manager.users.daniel.programs.plasma = {
     enable = true;
     overrideConfig = true;
@@ -22,6 +27,10 @@
       };
       iconTheme = "crystal-remix";
       wallpaper = "/mnt/data/Documents/nixos-hex-bg.png";
+      windowDecorations = {
+        library = "org.kde.kwin.aurorae";
+        theme = "__aurorae__svg__nightglowblue";
+      };
     };
     hotkeys.commands."launch-konsole" = {
       name = "Launch Konsole";
