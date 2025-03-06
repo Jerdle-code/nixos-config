@@ -45,7 +45,7 @@ home-manager.users.daniel.systemd.user.sessionVariables = { QT_QPA_PLATFORMTHEME
     shortcuts = {
       "yakuake"."toggle-window-state" = "F8,F12,Open/Retract Yakuake";
     };
-        panels = [
+    panels = [
       {
         location = "top";
         height = 26;
@@ -86,6 +86,45 @@ home-manager.users.daniel.systemd.user.sessionVariables = { QT_QPA_PLATFORMTHEME
         ];
       }
     ];
+    kwin = {
+      effects = {
+        blur = {
+          enable = true;
+          noise = 3;
+          strength = 8;
+        };
+        cube.enable = true;
+        dimAdminMode.enable = true;
+        fallApart.enable = true;
+        minimization = {
+          animation = "magiclamp";
+          duration = 100;
+        };
+        shakeCursor.enable = true;
+        translucency.enable = true;
+        windowOpenClose.animation = "scale";
+        wobblyWindows.enable = "true";
+        nightLight = {
+          enable = true;
+          location = {
+            latitude = "56.6731";
+            longitude = "-3.0044";
+          };
+          mode = "times";
+          temperature = {
+            day = 6500;
+            night = 3500;
+          };
+          time = {
+            evening = "22:00";
+            morning = "07:00";
+          };
+          transitionTime = 30;
+        };
+      };
+      virtualDesktops = 4;
+      rows = 1;
+    };
   };
 };
 }
