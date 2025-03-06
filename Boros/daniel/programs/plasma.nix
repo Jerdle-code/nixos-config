@@ -122,8 +122,10 @@ home-manager.users.daniel.systemd.user.sessionVariables = { QT_QPA_PLATFORMTHEME
           transitionTime = 30;
         };
       };
-      virtualDesktops = 4;
-      rows = 1;
+      virtualDesktops = {
+        number = 4;
+        rows = 1;
+      };
     };
   };
 };
