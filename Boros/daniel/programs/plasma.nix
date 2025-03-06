@@ -103,7 +103,7 @@ home-manager.users.daniel.systemd.user.sessionVariables = { QT_QPA_PLATFORMTHEME
         shakeCursor.enable = true;
         translucency.enable = true;
         windowOpenClose.animation = "scale";
-        wobblyWindows.enable = "true";
+        wobblyWindows.enable = true;
       };
       nightLight = {
         enable = true;
