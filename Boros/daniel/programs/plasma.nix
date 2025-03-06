@@ -90,7 +90,7 @@ home-manager.users.daniel.systemd.user.sessionVariables = { QT_QPA_PLATFORMTHEME
       effects = {
         blur = {
           enable = true;
-          noise = 3;
+          noiseStrength = 3;
           strength = 8;
         };
         cube.enable = true;
