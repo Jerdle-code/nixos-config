@@ -19,7 +19,7 @@
 #  platformTheme.name = "kde";
   style.name = "kvantum";
 };
-systemd.user.sessionVariables = { QT_QPA_PLATFORMTHEME = "kde"; };
+home-manager.users.daniel.systemd.user.sessionVariables = { QT_QPA_PLATFORMTHEME = "kde"; };
  home-manager.users.daniel.programs.plasma = {
     enable = true;
     overrideConfig = true;
