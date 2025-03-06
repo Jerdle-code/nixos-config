@@ -12,9 +12,14 @@
         ]);
           home-manager.users.daniel.qt = {
   enable = true;
-  platformTheme.name = "kde";
+      platformTheme.package = with pkgs.kdePackages; [
+        plasma-integration
+        systemsettings
+    ];
+#  platformTheme.name = "kde";
   style.name = "kvantum";
 };
+systemd.user.sessionVariables = { QT_QPA_PLATFORMTHEME = "kde"; };
  home-manager.users.daniel.programs.plasma = {
     enable = true;
     overrideConfig = true;
