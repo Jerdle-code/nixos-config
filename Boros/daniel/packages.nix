@@ -38,6 +38,7 @@
       golly
       audacity
       webcamoid
+      nil
     ])
     ++
     (with pkgs.kdePackages; [
