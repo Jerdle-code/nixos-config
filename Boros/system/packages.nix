@@ -22,6 +22,7 @@
           dive # look into docker image layers
     podman-tui # status of containers in the terminal
     podman-compose # start group of containers for dev
+    distrobox
   ];
   services.upower.enable=true;
 programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
