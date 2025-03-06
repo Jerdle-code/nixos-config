@@ -20,7 +20,7 @@
     overrideConfig = true;
      workspace = {
       clickItemTo = "open"; # If you liked the click-to-open default from plasma 5
-      lookAndFeel = "org.kde.breezedark.desktop";
+      theme = "darkcold";
       cursor = {
         theme = "Night Diamond (Blue)";
         size = 32;
