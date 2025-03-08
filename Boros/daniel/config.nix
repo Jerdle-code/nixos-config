@@ -15,6 +15,15 @@ programs.git = {
         }/bin/git-credential-libsecret";
     };
   };
+  programs.zsh = {
+    enable = true;
+    initExtra = "fastfetch";
+    enableVteIntegration = true;
+    oh-my-zsh = {
+        enable = true;
+        theme = "tjkirch";
+    };
+  };
   programs.home-manager.enable = true;
   home.stateVersion = "23.11";
 }

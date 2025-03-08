@@ -69,12 +69,4 @@ darkcold-kvantum-theme
 darkcold-plasma6-theme
 e17gtk-revolved
 ]);
-  programs.zsh = {
-    enable = true;
-    initExtra = "fastfetch";
-    oh-my-zsh = {
-        enable = true;
-        theme = "tjkirch";
-    };
-  };
 }
