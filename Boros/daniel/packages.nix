@@ -39,6 +39,7 @@
       audacity
       webcamoid
       nil
+      pylsp
     ])
     ++
     (with pkgs.kdePackages; [
