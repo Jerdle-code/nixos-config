@@ -39,7 +39,7 @@
       audacity
       webcamoid
       nil
-      python313Packages.python-lsp-server
+      python312Packages.python-lsp-server
     ])
     ++
     (with pkgs.kdePackages; [
