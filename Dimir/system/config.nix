@@ -1,6 +1,6 @@
 { config, pkgs,... }:
 {
-  networking.hostName = "Boros"; # Define your hostname.
+  networking.hostName = "Dimir"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -28,5 +28,12 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+programs.virt-manager.enable = true;
+
+users.groups.libvirtd.members = ["your_username"];
+
+virtualisation.libvirtd.enable = true;
+
+virtualisation.spiceUSBRedirection.enable = true;
 }
 

@@ -17,7 +17,7 @@ programs.git = {
   };
   programs.zsh = {
     enable = true;
-    initExtra = "fastfetch";
+    initContent = "fastfetch";
     enableVteIntegration = true;
     oh-my-zsh = {
         enable = true;

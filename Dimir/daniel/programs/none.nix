@@ -18,11 +18,11 @@ imports = [
         night = 3700;
         };
     };
-    home-manager.users.daniel.services.mako = {
-        enable = true;
-        defaultTimeout = 4000;
-        backgroundColor = "#2a2e32";
-        borderRadius = 20;
+    home-manager.users.daniel.services.mako.enable = true;
+    home-manager.users.daniel.services.mako.settings = {
+        default-timeout = 4000;
+        background-color = "#2a2e32";
+        border-radius = 20;
         font = "monospace 12";
         padding = "10";
         height = 300;
@@ -38,7 +38,7 @@ imports = [
         networkmanagerapplet
         nwg-look
         keepassxc
-	swaybg
+        swaybg
       ]);
   };
 }

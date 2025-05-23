@@ -2,7 +2,6 @@
 {
 #nixpkgs.config.allowUnfree = true;
   programs.dconf.enable = true;
-  virtualisation.libvirtd.enable = true;
     environment.systemPackages = with pkgs; [
       winetricks
       wineWowPackages.full
