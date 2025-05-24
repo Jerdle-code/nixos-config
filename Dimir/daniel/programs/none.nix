@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+  { config, pkgs, lib, ... }:
 {
 imports = [
 ./waybar.nix
@@ -39,6 +39,11 @@ imports = [
         nwg-look
         keepassxc
         swaybg
+        qt6ct
       ]);
+    home-manager.users.daniel.qt = {
+      enable = true;
+      platformTheme.name = "qt6ct";
+    };
   };
 }
