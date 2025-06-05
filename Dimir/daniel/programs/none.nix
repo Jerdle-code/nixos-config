@@ -43,7 +43,7 @@ imports = [
       ]);
     home-manager.users.daniel.qt = {
       enable = true;
-      platformTheme.name = "qt6ct";
+      platformTheme.name = mkDefault "qt6ct";
     };
   };
 }
