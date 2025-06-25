@@ -18,7 +18,6 @@
       gimp-with-plugins
       protontricks
       musescore
-      lmms
       hydrogen
       gnubg
       dconf-editor
