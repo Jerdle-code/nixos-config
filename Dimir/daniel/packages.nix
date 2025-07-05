@@ -40,7 +40,6 @@
       nil
       python312Packages.python-lsp-server
       android-tools
-      toybox
     ])
     ++
     (with pkgs.kdePackages; [
