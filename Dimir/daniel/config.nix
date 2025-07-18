@@ -24,6 +24,11 @@ programs.git = {
         theme = "tjkirch";
     };
   };
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs-gtk;  # replace with pkgs.emacs-gtk, or a version provided by the community overlay if desired.
+    extraConfig = '' '';
+  };
   programs.home-manager.enable = true;
   home.stateVersion = "23.11";
 }
