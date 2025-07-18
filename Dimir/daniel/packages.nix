@@ -15,7 +15,7 @@
       lyx
       texstudio
       openrct2
-      gimp-with-plugins
+      gimp3-with-plugins
       protontricks
       musescore
       hydrogen
