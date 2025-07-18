@@ -33,7 +33,7 @@ programs.partition-manager.enable = true;
   programs.zsh.enable = true;
   services.power-profiles-daemon.enable = true;
   # List services that you want to enable:
-  services.auto-cpufreq.enable = true;
+#  services.auto-cpufreq.enable = true;
    virtualisation.virtualbox.host.enable = true;
 #   virtualisation.virtualbox.host.enableExtensionPack = true;
 #services.fprintd.enable = true;
