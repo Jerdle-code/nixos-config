@@ -21,4 +21,4 @@
 };
 home-manager.users.daniel.systemd.user.sessionVariables = { QT_QPA_PLATFORMTHEME = lib.mkForce "kde"; };
 };
-};
+}
