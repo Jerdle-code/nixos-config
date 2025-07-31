@@ -35,7 +35,7 @@
       libreoffice-fresh
       wxmaxima
       golly
-      audacity
+      #Broken# audacity
       webcamoid
       nil
       python312Packages.python-lsp-server
