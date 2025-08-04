@@ -57,7 +57,7 @@
     };
 
   fileSystems."/mnt/data" =
-    { device = "/dev/disk/by-uuid/672bbe4d-a3ac-4ccc-beda-d77e60fe174d";
+    { device = "/dev/disk/by-uuid/71c46a36-d20d-4712-8a97-6db604214b49";
       fsType = "btrfs";
     };
   swapDevices = [{device = "/dev/disk/by-uuid/5190341d-7d3d-49f6-9daf-617cc66c758f";} ];
