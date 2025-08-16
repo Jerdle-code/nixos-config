@@ -15,52 +15,19 @@
   boot.kernel.sysctl = { "vm.swappiness" = 10;};
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
+    { device = "/dev/disk/by-uuid/b8af5075-ae84-4d31-8d6a-e07e5a7f5f62";
       fsType = "btrfs";
-      options = [ "subvol=@" "compress=zstd" ];
+      options = [ "subvol=@" "compress=zstd"];
     };
 
-    fileSystems."/fs" =
-    { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
-      fsType = "btrfs";
-      options = [ "compress=zstd" ];
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
-      fsType = "btrfs";
-      options = [ "subvol=@home" "compress=zstd" ];
-    };
-
-  fileSystems."/nix/store" =
-    { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
-      fsType = "btrfs";
-      options = [ "subvol=@nix" "compress=zstd" "noatime"];
-    };
-
-  fileSystems."/var/lib/flatpak" =
-    { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
-      fsType = "btrfs";
-      options = [ "subvol=@flatpak" "compress=zstd" "noatime"];
-    };
-
-      fileSystems."/home/daniel/.local/share/containers" =
-    { device = "/dev/disk/by-uuid/9c9a4641-ae10-476d-8a91-714029aecf77";
-      fsType = "btrfs";
-      options = [ "subvol=@docker" "compress=zstd" "noatime"];
-    };
-
-
-  fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/B440-FE4B";
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/F3EA-6845";
       fsType = "vfat";
     };
 
-  fileSystems."/mnt/data" =
-    { device = "/dev/disk/by-uuid/71c46a36-d20d-4712-8a97-6db604214b49";
-      fsType = "btrfs";
-    };
-  swapDevices = [{device = "/dev/disk/by-uuid/5190341d-7d3d-49f6-9daf-617cc66c758f";} ];
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/da8f8947-4d0e-4907-81ba-a40b1f0bc121"; }
+    ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
