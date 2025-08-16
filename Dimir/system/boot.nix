@@ -9,7 +9,6 @@ boot.loader.systemd-boot.enable = true;
 #useOSProber = true;
 #};
   boot.loader.efi.canTouchEfiVariables = true;
-boot.loader.efi.efiSysMountPoint = "/boot/efi";
+boot.loader.efi.efiSysMountPoint = "/boot";
 boot.kernel.sysctl = {"net.ipv4.ip_forward" = 1;};
-boot.kernelPackages = pkgs.linuxPackages_6_6;
 }
