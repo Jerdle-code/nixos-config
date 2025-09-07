@@ -31,11 +31,11 @@
       crystal-dock
       sage
       krita
-      brave
+      firefox
       libreoffice-fresh
       wxmaxima
       golly
-      #Broken# audacity
+      audacity
       webcamoid
       nil
       python312Packages.python-lsp-server
