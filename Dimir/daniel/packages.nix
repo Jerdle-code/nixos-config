@@ -29,7 +29,7 @@
       pandoc
       python3
       crystal-dock
-      sage
+      #sage
       krita
       firefox
       libreoffice-fresh
