@@ -17,8 +17,6 @@
       openrct2
       gimp3-with-plugins
       protontricks
-      musescore
-      hydrogen
       gnubg
       dconf-editor
       wvkbd
@@ -30,8 +28,6 @@
       python3
       crystal-dock
       sage
-      krita
-      libreoffice-fresh
       wxmaxima
       golly
       audacity
