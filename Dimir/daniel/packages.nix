@@ -31,7 +31,6 @@
       crystal-dock
       sage
       krita
-      floorp
       libreoffice-fresh
       wxmaxima
       golly
