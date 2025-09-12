@@ -11,9 +11,6 @@
       lm_sensors
       ryzenadj
       htop
-      texlive.combined.scheme-full
-      lyx
-      texstudio
       openrct2
       gimp3-with-plugins
       protontricks
@@ -21,20 +18,18 @@
       dconf-editor
       wvkbd
       webcamoid
-      praat
       pavucontrol
       pamixer
       pandoc
       python3
       crystal-dock
-      sage
-      wxmaxima
       golly
       audacity
       webcamoid
       nil
       python312Packages.python-lsp-server
       android-tools
+      libreoffice-still
     ])
     ++
     (with pkgs.kdePackages; [
