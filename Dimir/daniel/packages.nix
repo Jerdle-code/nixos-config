@@ -30,6 +30,7 @@
       python312Packages.python-lsp-server
       android-tools
       libreoffice-still
+      musescore
     ])
     ++
     (with pkgs.kdePackages; [
