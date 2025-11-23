@@ -29,7 +29,6 @@
       nil
       python312Packages.python-lsp-server
       android-tools
-      libreoffice-still
       musescore
     ])
     ++
@@ -50,6 +49,7 @@
     ark
     discover
     kwalletmanager
+    calligra
 ]) ++ (with lib.packagesFromDirectoryRecursive{
 inherit (pkgs) callPackage;
 directory = ./. + "/../packages";
