@@ -7,9 +7,9 @@
   };
 programs.git = {
     enable = true;
+    settings = {
       userName = "Jerdle-code";
       userEmail = "danielamdurer@gmail.com";
-    extraConfig = {
       credential.helper = "${
           pkgs.git.override { withLibsecret = true; }
         }/bin/git-credential-libsecret";

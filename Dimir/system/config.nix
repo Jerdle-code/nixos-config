@@ -10,7 +10,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
     services.pulseaudio.enable = false;
-  services.logind.lidSwitch = "ignore";
+  services.logind.settings.Login.HandleLidSwitch = "ignore";
    services.printing.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
@@ -35,8 +35,5 @@ users.groups.libvirtd.members = ["your_username"];
 virtualisation.libvirtd.enable = true;
 
 virtualisation.spiceUSBRedirection.enable = true;
-services.udev.packages = [
-  pkgs.android-udev-rules
-];
 }
 
