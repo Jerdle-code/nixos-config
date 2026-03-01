@@ -31,6 +31,8 @@
       android-tools
       musescore
       firefox
+      krita
+      libreoffice-still
     ])
     ++
     (with pkgs.kdePackages; [
@@ -50,8 +52,6 @@
     ark
     discover
     kwalletmanager
-    calligra
-    krita
 ]) ++ (with lib.packagesFromDirectoryRecursive{
 inherit (pkgs) callPackage;
 directory = ./. + "/../packages";
