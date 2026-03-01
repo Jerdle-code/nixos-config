@@ -8,9 +8,12 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... }@inputs: {
-    # Please replace my-nixos with your hostname
-    nixosConfigurations.Dimir = nixpkgs.lib.nixosSystem rec {
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... }@inputs:
+    let
+        system = "x86_64-linux";
+        pkgs-unstable = import nixpkgs-unstable { inherit system; };
+    in{
+    nixosConfigurations.Dimir = nixpkgs.lib.nixosSystem{
       system = "x86_64-linux";
       pkgs-unstable = import nixpkgs-unstable { inherit system; };
       modules = [
@@ -27,6 +30,6 @@
             # arguments to home.nix
           }
       ];
+      };
     };
-  };
 }
