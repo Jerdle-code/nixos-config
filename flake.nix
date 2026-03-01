@@ -14,8 +14,8 @@
         pkgs-unstable = import nixpkgs-unstable { inherit system; };
     in{
     nixosConfigurations.Dimir = nixpkgs.lib.nixosSystem{
-      system = "x86_64-linux";
-      pkgs-unstable = import nixpkgs-unstable { inherit system; };
+      inherit system;
+      specialArgs = { inherit pkgs-unstable; };
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
