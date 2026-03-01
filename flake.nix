@@ -5,12 +5,14 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.Dimir = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
+      pkgs-unstable = import nixpkgs-unstable { inherit system; };
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
