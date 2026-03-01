@@ -8,7 +8,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixpkgs-unstable, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.Dimir = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
