@@ -30,6 +30,7 @@
       python312Packages.python-lsp-server
       android-tools
       musescore
+      firefox
     ])
     ++
     (with pkgs.kdePackages; [
@@ -50,6 +51,7 @@
     discover
     kwalletmanager
     calligra
+    krita
 ]) ++ (with lib.packagesFromDirectoryRecursive{
 inherit (pkgs) callPackage;
 directory = ./. + "/../packages";
