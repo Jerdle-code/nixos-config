@@ -17,7 +17,6 @@
     wcm
    wf-shell
    wayfire-plugins-extra
-    firedecor
      ];
  };
   };
