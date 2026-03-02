@@ -10,5 +10,5 @@
       ./none.nix
       ./niri.nix
     ];
-    local.daniel.desktop.plasma.enable = true;
+    local.daniel.desktop.wayfire.enable = true;
 }
