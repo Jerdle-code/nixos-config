@@ -39,7 +39,7 @@ imports = [
         nwg-look
         keepassxc
         swaybg
-        qt6ct
+        qt6Packages.qt6ct
       ]);
     home-manager.users.daniel.qt = {
       enable = true;
