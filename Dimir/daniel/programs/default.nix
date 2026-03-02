@@ -10,6 +10,5 @@
       ./none.nix
       ./niri.nix
     ];
-    local.daniel.desktop.wayfire.enable = true;
-    local.daniel.desktop.hyprland.enable = true;
+    local.daniel.desktop.plasma.enable = true;
 }
