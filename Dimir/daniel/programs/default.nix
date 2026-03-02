@@ -11,4 +11,5 @@
       ./niri.nix
     ];
     local.daniel.desktop.wayfire.enable = true;
+    local.daniel.desktop.hyprland.enable = true;
 }
