@@ -43,9 +43,6 @@ fonts.packages = with pkgs; [
    font-awesome
    powerline
 ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-#services.fprintd.tod.enable = true;
-
-#services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
   # Enable the OpenSSH daemon.
    services.openssh.enable = true;
    programs.ssh.askPassword = "lxqt-openssh-askpass";

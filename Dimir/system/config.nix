@@ -10,7 +10,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
     services.pulseaudio.enable = false;
-  services.logind.settings.Login.HandleLidSwitch = "ignore";
    services.printing.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
