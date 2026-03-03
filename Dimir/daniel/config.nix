@@ -3,7 +3,7 @@
   home.username = "daniel";
   home.homeDirectory = "/home/daniel";
   home.sessionVariables = {
-    EDITOR = "nano";
+    EDITOR = "emacs";
   };
   programs.git = {
     enable = true;
@@ -28,7 +28,7 @@
   };
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs-gtk;  # replace with pkgs.emacs-gtk, or a version provided by the community overlay if desired.
+    package = pkgs.emacs-gtk;
     extraConfig = '' '';
   };
   programs.home-manager.enable = true;

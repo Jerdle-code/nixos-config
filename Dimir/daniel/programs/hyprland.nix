@@ -63,10 +63,8 @@
         "lxqt-policykit-agent"
         "nm-applet"
         "keepassxc --keyfile $HOME/FDO $HOME/FDO.kdbx"
-        "gammastep"
         "waybar"
         "avizo-service"
-        "mako"
       ];
       decoration = {
         active_opacity = 1.0;

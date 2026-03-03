@@ -1,6 +1,5 @@
 { config, pkgs, lib, ... }:
 {
- #nixpkgs.config.allowUnfree = true;
   home.packages = (with pkgs; [
       (prismlauncher.override { jdks = [ jdk8 jdk17 jdk21 ]; })
       fastfetch
@@ -25,7 +24,6 @@
       crystal-dock
       golly
       audacity
-      webcamoid
       nil
       python312Packages.python-lsp-server
       android-tools

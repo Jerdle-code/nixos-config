@@ -1,6 +1,5 @@
 { config, pkgs,... }:
 {
-#nixpkgs.config.allowUnfree = true;
   programs.dconf.enable = true;
     environment.systemPackages = with pkgs; [
       winetricks

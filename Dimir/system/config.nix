@@ -15,6 +15,7 @@
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   security.rtkit.enable = true;
+  boot.kernel.sysctl = {"net.ipv4.ip_forward" = 1;};
 
   services.pipewire = {
     enable = true;
@@ -29,8 +30,6 @@
     #media-session.enable = true;
   };
 programs.virt-manager.enable = true;
-
-users.groups.libvirtd.members = ["your_username"];
 
 virtualisation.libvirtd.enable = true;
 
