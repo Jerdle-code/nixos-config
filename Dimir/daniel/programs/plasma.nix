@@ -7,9 +7,9 @@
   };
   config = lib.mkIf config.local.daniel.desktop.plasma.enable {
     services.desktopManager.plasma6.enable = true;
-        home-manager.users.daniel.home.packages = (with pkgs.kdePackages; [
+        home-manager.users.daniel.home.packages = with pkgs.kdePackages; [
         yakuake
-        ]);
+        ];
           home-manager.users.daniel.qt = {
   enable = true;
       platformTheme.package = with pkgs.kdePackages; [

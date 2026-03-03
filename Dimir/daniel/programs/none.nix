@@ -28,7 +28,7 @@ imports = [
         height = 300;
         width = 500;
     };
-    home-manager.users.daniel.home.packages = (with pkgs; [
+    home-manager.users.daniel.home.packages = with pkgs; [
         wofi
         fuzzel
         mako
@@ -40,7 +40,7 @@ imports = [
         keepassxc
         swaybg
         qt6Packages.qt6ct
-      ]);
+      ];
     home-manager.users.daniel.qt = {
       enable = true;
       platformTheme.name = lib.mkDefault "qt6ct";
