@@ -24,7 +24,7 @@
         "usb_storage"
         "sd_mod"
       ];
-      kernelModules = [ ];
+      kernelModules = [ "amdgpu" ];
     };
 
     kernelModules = [ "kvm-amd" ];
