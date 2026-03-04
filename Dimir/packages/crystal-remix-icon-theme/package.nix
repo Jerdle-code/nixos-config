@@ -1,4 +1,9 @@
-{ lib, stdenv, gtk3, fetchFromGitHub }:
+{
+  lib,
+  stdenv,
+  gtk3,
+  fetchFromGitHub,
+}:
 
 stdenv.mkDerivation rec {
   pname = "crystal-remix-icon-theme";
@@ -10,9 +15,9 @@ stdenv.mkDerivation rec {
     rev = "v${version}";
     sha256 = "sha256-DiFYz+hEPX19cndkUtzDO/Fuvsv+3UL41Mfhxy1rE9g=";
   };
- nativeBuildInputs = [ gtk3 ];
-dontDropIconThemeCache = true;
-    installPhase = ''
+  nativeBuildInputs = [ gtk3 ];
+  dontDropIconThemeCache = true;
+  installPhase = ''
     mkdir -p $out/share/icons/crystal-remix
     cp -va * $out/share/icons/crystal-remix
     gtk-update-icon-cache $out/share/icons/crystal-remix

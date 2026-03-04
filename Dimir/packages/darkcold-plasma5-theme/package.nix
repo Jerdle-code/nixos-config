@@ -1,6 +1,10 @@
-{ lib, stdenv, fetchFromGitHub }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+}:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation  {
   pname = "darkcold-plasma5-theme";
   version = "20241023";
 
@@ -14,7 +18,7 @@ stdenv.mkDerivation rec {
     ];
   };
 
-    installPhase = ''
+  installPhase = ''
     mkdir -p $out/share/plasma/desktoptheme/darkcold
     cp -va plasma/plasma5darkcold/* $out/share/plasma/desktoptheme/darkcold/
   '';

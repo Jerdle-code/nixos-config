@@ -1,6 +1,10 @@
-{ lib, stdenv, fetchFromGitHub }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+}:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation  {
   pname = "darkcold-kvantum-theme";
   version = "20241023";
 

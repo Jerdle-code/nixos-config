@@ -1,10 +1,14 @@
-{ config, pkgs, lib, ... }:
 {
-  imports =
-    [
-      ./none.nix
-      ./waybar.nix
-    ];
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  imports = [
+    ./none.nix
+    ./waybar.nix
+  ];
   options = {
     local.daniel.desktop.niri.enable = lib.mkEnableOption ''
       Customised Niri desktop.

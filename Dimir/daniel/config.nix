@@ -1,36 +1,41 @@
-{ config, pkgs, lib, ... }:
 {
-  home.username = "daniel";
-  home.homeDirectory = "/home/daniel";
-  home.sessionVariables = {
+  pkgs,
+  ...
+}:
+{
+  home = {
+  username = "daniel";
+  homeDirectory = "/home/daniel";
+  sessionVariables = {
     EDITOR = "emacs";
   };
-  programs.git = {
+  stateVersion = "23.11";
+  };
+  programs = {git = {
     enable = true;
     settings = {
       user = {
         name = "Jerdle-code";
         email = "danielamdurer@gmail.com";
       };
-      credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
+      credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
     };
   };
-  programs.zsh = {
+  zsh = {
     enable = true;
     initContent = "fastfetch";
     enableVteIntegration = true;
     oh-my-zsh = {
-        enable = true;
-        theme = "tjkirch";
+      enable = true;
+      theme = "tjkirch";
     };
   };
-  programs.emacs = {
+  emacs = {
     enable = true;
     package = pkgs.emacs-gtk;
-    extraConfig = '' '';
+    extraConfig = "";
   };
-  programs.home-manager.enable = true;
-  home.stateVersion = "23.11";
+  home-manager.enable = true;
+  };
+
 }

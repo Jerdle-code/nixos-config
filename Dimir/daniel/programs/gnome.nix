@@ -1,4 +1,8 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  lib,
+  ...
+}:
 {
   options = {
     local.daniel.desktop.gnome.enable = lib.mkEnableOption ''

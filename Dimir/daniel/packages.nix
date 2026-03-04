@@ -1,7 +1,18 @@
-{ config, pkgs, lib, ... }:
 {
-  home.packages = (with pkgs; [
-      (prismlauncher.override { jdks = [ jdk8 jdk17 jdk21 ]; })
+  pkgs,
+  lib,
+  ...
+}:
+{
+  home.packages =
+    (with pkgs; [
+      (prismlauncher.override {
+        jdks = [
+          jdk8
+          jdk17
+          jdk21
+        ];
+      })
       fastfetch
       superTuxKart
       superTux
@@ -32,33 +43,33 @@
       krita
       libreoffice-still
     ])
-    ++
-    (with pkgs.kdePackages; [
-    breeze
-    breeze-gtk
-    breeze-icons
-    qtstyleplugin-kvantum
-    qt6ct
-    konsole
-    kcalc
-    okular
-    kolourpaint
-    gwenview
-    kate
-    plasmatube
-    dolphin
-    ark
-    discover
-    kwalletmanager
-]) ++ (with lib.packagesFromDirectoryRecursive{
-inherit (pkgs) callPackage;
-directory = ./. + "/../packages";
-};
-[
-crystal-remix-icon-theme
-darkcold-gtk-theme
-darkcold-kvantum-theme
-darkcold-plasma6-theme
-e17gtk-revolved
-]);
+    ++ (with pkgs.kdePackages; [
+      breeze
+      breeze-gtk
+      breeze-icons
+      qtstyleplugin-kvantum
+      qt6ct
+      konsole
+      kcalc
+      okular
+      kolourpaint
+      gwenview
+      kate
+      plasmatube
+      dolphin
+      ark
+      discover
+      kwalletmanager
+    ])
+    ++ (
+      with lib.packagesFromDirectoryRecursive {
+        inherit (pkgs) callPackage;
+        directory = ./. + "/../packages";
+      }; [
+        crystal-remix-icon-theme
+        darkcold-gtk-theme
+        darkcold-kvantum-theme
+        darkcold-plasma6-theme
+        e17gtk-revolved
+      ]);
 }

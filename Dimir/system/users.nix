@@ -1,15 +1,21 @@
-{ config, pkgs,... }:
+{pkgs, ... }:
 
 {
-users.users = {
-   daniel = {
+  users.users = {
+    daniel = {
       isNormalUser = true;
       description = "Daniel Amdurer";
       group = "users";
       home = "/home/daniel";
       uid = 1000;
-      extraGroups  = [ "wheel" "networkmanager" "libvirtd" "input"  "podman"];
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+        "libvirtd"
+        "input"
+        "podman"
+      ];
       shell = pkgs.zsh;
-   };
-};
+    };
+  };
 }

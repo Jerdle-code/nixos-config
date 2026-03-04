@@ -1,6 +1,10 @@
-{lib, stdenv, fetchgit }:
+{
+  lib,
+  stdenv,
+  fetchgit,
+}:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation  {
   pname = "e17gtk-revolved";
   version = "git";
 
