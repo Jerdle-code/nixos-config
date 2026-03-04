@@ -12,6 +12,7 @@
   };
   config = lib.mkIf config.local.daniel.desktop.plasma.enable {
     services.desktopManager.plasma6.enable = true;
+    security.pam.services.daniel.kwallet.enable = true;
     home-manager.users.daniel.home.packages = with pkgs.kdePackages; [
       yakuake
     ];
@@ -24,5 +25,4 @@
       platformTheme.name = "kde";
     };
   };
-  security.pam.services.daniel.kwallet.enable = true;
 }
