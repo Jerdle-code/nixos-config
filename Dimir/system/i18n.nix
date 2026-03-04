@@ -26,7 +26,7 @@
       layout = "gb";
       variant = "";
     };
-    services.geoclue2.enable = true;
+    geoclue2.enable = true;
   };
 
   # Configure console keymap
