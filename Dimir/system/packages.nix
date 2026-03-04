@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  programs.dconf.enable = true;
+
   environment.systemPackages = with pkgs; [
     winetricks
     wineWowPackages.full
@@ -23,15 +23,15 @@
     podman-compose # start group of containers for dev
     distrobox
   ];
-  services.upower.enable = true;
-  programs.gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
-  services.udisks2.enable = true;
   security.polkit.enable = true;
-  services.flatpak.enable = true;
-  services.gvfs.enable = true;
-  programs.partition-manager.enable = true;
-  programs.zsh.enable = true;
-  services.power-profiles-daemon.enable = true;
+  services = {
+    upower.enable = true;
+    udisks2.enable = true;
+    flatpak.enable = true;
+    gvfs.enable = true;
+    power-profiles-daemon.enable = true;
+    openssh.enable = true;
+  };
   fonts.packages =
     with pkgs;
     [
@@ -42,8 +42,6 @@
     ]
     ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-  programs.ssh.askPassword = "lxqt-openssh-askpass";
   virtualisation.containers.enable = true;
   virtualisation = {
     podman = {
@@ -54,5 +52,12 @@
       defaultNetwork.settings.dns_enabled = true;
     };
   };
-  programs.kdeconnect.enable = true;
+  programs = {
+    dconf.enable = true;
+    ssh.askPassword = "lxqt-openssh-askpass";
+    kdeconnect.enable = true;
+    partition-manager.enable = true;
+    zsh.enable = true;
+    gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+  };
 }

@@ -4,7 +4,7 @@
   fetchFromGitHub,
 }:
 
-stdenv.mkDerivation  {
+stdenv.mkDerivation {
   pname = "darkcold-kvantum-theme";
   version = "20241023";
 

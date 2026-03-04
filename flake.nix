@@ -31,11 +31,11 @@
           Dimir/daniel/programs/default.nix
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.daniel = import Dimir/daniel/default.nix;
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.daniel = import Dimir/daniel/default.nix;
+            };
           }
         ];
       };

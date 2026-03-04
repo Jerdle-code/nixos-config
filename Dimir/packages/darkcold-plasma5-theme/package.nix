@@ -4,7 +4,7 @@
   fetchFromGitHub,
 }:
 
-stdenv.mkDerivation  {
+stdenv.mkDerivation {
   pname = "darkcold-plasma5-theme";
   version = "20241023";
 

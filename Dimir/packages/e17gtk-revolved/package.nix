@@ -4,7 +4,7 @@
   fetchgit,
 }:
 
-stdenv.mkDerivation  {
+stdenv.mkDerivation {
   pname = "e17gtk-revolved";
   version = "git";
 

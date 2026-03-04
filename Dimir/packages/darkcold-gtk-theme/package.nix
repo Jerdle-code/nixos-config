@@ -4,7 +4,7 @@
   fetchFromGitHub,
 }:
 
-stdenv.mkDerivation  {
+stdenv.mkDerivation {
   pname = "darkcold-gtk-theme";
   version = "20231023";
 

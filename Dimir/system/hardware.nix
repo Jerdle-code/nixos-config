@@ -4,7 +4,7 @@
 {
   config,
   lib,
-  pkgs,
+  #pkgs,
   modulesPath,
   pkgs-unstable,
   ...
@@ -15,49 +15,57 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = [
-    "nvme"
-    "xhci_pci"
-    "thunderbolt"
-    "usb_storage"
-    "sd_mod"
-  ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
-  boot.kernel.sysctl = {
-    "vm.swappiness" = 10;
+  boot = {
+    initrd = {
+      availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "thunderbolt"
+        "usb_storage"
+        "sd_mod"
+      ];
+      kernelModules = [ ];
+    };
+
+    kernelModules = [ "kvm-amd" ];
+    extraModulePackages = [ ];
+    kernel.sysctl = {
+      "vm.swappiness" = 10;
+    };
   };
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/b8af5075-ae84-4d31-8d6a-e07e5a7f5f62";
-    fsType = "btrfs";
-    options = [
-      "subvol=@"
-      "compress=zstd"
-    ];
-  };
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/b8af5075-ae84-4d31-8d6a-e07e5a7f5f62";
+      fsType = "btrfs";
+      options = [
+        "subvol=@"
+        "compress=zstd"
+      ];
+    };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/F3EA-6845";
-    fsType = "vfat";
+    "/boot" = {
+      device = "/dev/disk/by-uuid/F3EA-6845";
+      fsType = "vfat";
+    };
   };
 
   swapDevices = [
     { device = "/dev/disk/by-uuid/da8f8947-4d0e-4907-81ba-a40b1f0bc121"; }
   ];
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  hardware.cpu.amd.ryzen-smu.enable = true;
+  hardware = {
+    cpu.amd = {
+      updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+      ryzen-smu.enable = true;
+    };
+    ckb-next = {
+      enable = true;
+      package = pkgs-unstable.ckb-next;
+    };
+  };
   services.hardware.bolt.enable = true;
-  hardware.ckb-next.enable = true;
-  hardware.ckb-next.package = pkgs-unstable.ckb-next;
 }
