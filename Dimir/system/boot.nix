@@ -2,7 +2,9 @@
 {
   # Bootloader.
   boot.loader = {
-    systemd-boot.enable = true;
+    limine = {
+      enable = true;
+    };
     efi = {
       canTouchEfiVariables = true;
       efiSysMountPoint = "/boot";
