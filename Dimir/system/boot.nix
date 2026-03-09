@@ -1,4 +1,4 @@
-{ ... }:
+{pkgs, ... }:
 {
   # Bootloader.
   boot.loader = {
@@ -10,4 +10,5 @@
       efiSysMountPoint = "/boot";
     };
   };
+  environment.systemPackages = [pkgs.sbctl];
 }
