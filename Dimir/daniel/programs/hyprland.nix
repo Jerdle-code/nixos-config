@@ -15,10 +15,7 @@
   };
   config = lib.mkIf config.local.daniel.desktop.hyprland.enable {
     programs.hyprland.enable = true;
-    programs.hyprlock.enable = true;
-    local.daniel.desktop.none.enable = true;
-    local.daniel.program.waybar  = {
-    enable = true;
+    programs.hyprlock = {enable = true;
     settings = {
       general = {
         hide_cursor = true;
@@ -123,6 +120,8 @@
       animation = [ "inputFieldColors, 0" ];
     };
     };
+    local.daniel.desktop.none.enable = true;
+    local.daniel.program.waybar.enable = true;
     home-manager.users.daniel.wayland.windowManager.hyprland = {
       enable = true;
       settings = {
