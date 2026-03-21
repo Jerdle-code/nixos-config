@@ -68,7 +68,6 @@
           "lxqt-policykit-agent"
           "nm-applet"
           "keepassxc --keyfile $HOME/FDO $HOME/FDO.kdbx"
-          "waybar"
           "avizo-service"
         ];
         decoration = {
