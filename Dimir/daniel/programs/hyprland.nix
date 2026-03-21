@@ -20,6 +20,9 @@
     home-manager.users.daniel.wayland.windowManager.hyprland = {
       enable = true;
       settings = {
+	input = {
+	  "kb-layout" = "gb";
+	};
         "monitor" = ",preferred,auto,1";
         "$mod" = "SUPER";
         "$terminal" = "konsole";
