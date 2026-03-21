@@ -15,7 +15,9 @@
   };
   config = lib.mkIf config.local.daniel.desktop.hyprland.enable {
     programs.hyprland.enable = true;
-    programs.hyprlock = {enable = true;
+    programs.hyprlock.enable = true;
+    home-manager.users.daniel.programs.hyprlock = {
+    enable = true;
     settings = {
       general = {
         hide_cursor = true;
