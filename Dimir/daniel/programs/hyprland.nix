@@ -21,7 +21,7 @@
       enable = true;
       settings = {
 	input = {
-	  "kb-layout" = "gb";
+	  "kb_layout" = "gb";
 	};
         "monitor" = ",preferred,auto,1";
         "$mod" = "SUPER";
