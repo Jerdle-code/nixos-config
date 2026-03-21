@@ -153,6 +153,7 @@
           "$mod, V, togglefloating,"
           "$mod, G, togglegroup,"
           "$mod, R, exec, $menu"
+          "$mod, L, exec, hyprlock"
           "$mod SHIFT, F, fullscreen,"
           "ALT, F2, exec, $run"
           "$mod, P, pseudo, # dwindle"
