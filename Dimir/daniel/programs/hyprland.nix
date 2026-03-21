@@ -32,8 +32,8 @@
         "$editor" = "kate";
         "$browser" = "firefox";
         general = {
-          "gaps_out" = "0";
-          "gaps_in" = "0";
+          "gaps_out" = "10";
+          "gaps_in" = "10";
         };
         bind = [
           "$mod, T, exec, $terminal"
@@ -69,6 +69,7 @@
           "nm-applet"
           "keepassxc --keyfile $HOME/FDO $HOME/FDO.kdbx"
           "avizo-service"
+	  "ckb-next"
         ];
         decoration = {
           active_opacity = 1.0;
