@@ -48,7 +48,8 @@
         networkmanagerapplet
         nwg-look
         keepassxc
-        swaybg
+        swww #replace with awww when name changes in Nix
+        waypaper
         qt6Packages.qt6ct
       ];
       qt = {
