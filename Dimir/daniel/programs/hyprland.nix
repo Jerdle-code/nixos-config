@@ -178,6 +178,7 @@
           "keepassxc --keyfile $HOME/FDO $HOME/FDO.kdbx"
           "avizo-service"
           "ckb-next"
+          "swww-daemon" #replace with awww when name changes in Nix
         ];
         decoration = {
           active_opacity = 1.0;
