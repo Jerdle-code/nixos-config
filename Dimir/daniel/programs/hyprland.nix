@@ -6,7 +6,6 @@
 {
   imports = [
     ./none.nix
-    ./waybar.nix
   ];
   options = {
     local.daniel.desktop.hyprland.enable = lib.mkEnableOption ''
@@ -127,9 +126,9 @@
     home-manager.users.daniel.wayland.windowManager.hyprland = {
       enable = true;
       settings = {
-	input = {
-	  "kb_layout" = "gb";
-	};
+        input = {
+          "kb_layout" = "gb";
+        };
         "monitor" = ",preferred,auto,1";
         "$mod" = "SUPER";
         "$terminal" = "konsole";
@@ -178,7 +177,7 @@
           "nm-applet"
           "keepassxc --keyfile $HOME/FDO $HOME/FDO.kdbx"
           "avizo-service"
-	  "ckb-next"
+          "ckb-next"
         ];
         decoration = {
           active_opacity = 1.0;
