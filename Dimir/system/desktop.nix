@@ -7,10 +7,16 @@
       enable = true;
       videoDrivers = [ "amdgpu" ];
     };
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
+   displayManager = {
+  sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
+  autoLogin = {
+    enable = true;
+    user = "daniel";
+  };
+};
   };
   hardware.graphics = {
     enable32Bit = true; # For 32 bit applications
