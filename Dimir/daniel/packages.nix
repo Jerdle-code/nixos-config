@@ -60,6 +60,7 @@
       ark
       discover
       kwalletmanager
+      k3b
     ])
     ++ (
       with lib.packagesFromDirectoryRecursive {
