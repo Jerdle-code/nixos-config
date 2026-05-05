@@ -22,7 +22,7 @@
     podman-tui # status of containers in the terminal
     podman-compose # start group of containers for dev
     distrobox
-   config.boot.kernelPackages.v4l2loopback.bin
+    v4l2loopback
   ];
   security.polkit.enable = true;
   services = {
