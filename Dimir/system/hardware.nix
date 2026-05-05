@@ -27,7 +27,7 @@
       kernelModules = [ "amdgpu" ];
     };
 
-    kernelModules = [ "kvm-amd" ];
+    kernelModules = [ "kvm-amd"  "v4l2loopback"];
     kernel.sysctl = {
       "vm.swappiness" = 10;
     };
