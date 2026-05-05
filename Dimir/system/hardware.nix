@@ -28,7 +28,6 @@
     };
 
     kernelModules = [ "kvm-amd" ];
-    extraModulePackages = [ ];
     kernel.sysctl = {
       "vm.swappiness" = 10;
     };
