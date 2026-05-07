@@ -42,6 +42,7 @@
       firefox
       krita
       libreoffice-still
+      scrcpy
     ])
     ++ (with pkgs.kdePackages; [
       breeze
