@@ -135,7 +135,7 @@
           "kb_layout" = "gb";
         };
         "monitor" = "Technical Concepts Ltd Beyond TV,3840x2160@120,auto,1";
-        "monitor" =" name, addreserved, 460, 100, 100, 100"
+        "monitor" =" name, addreserved, 460, 100, 100, 100";
         "$mod" = "SUPER";
         "$terminal" = "konsole";
         "$fileManager" = "pcmanfm-qt";
