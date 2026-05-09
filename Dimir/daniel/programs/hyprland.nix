@@ -135,7 +135,7 @@
           "kb_layout" = "gb";
         };
         "monitor" = ["HDMI-A-1,3840x2160@120,auto,1"
-        "HDMI-A-1,addreserved, 250, 30 , 30, 30"];
+        "HDMI-A-1,addreserved, 250, 15 , 15, 15"];
         "$mod" = "SUPER";
         "$terminal" = "konsole";
         "$fileManager" = "pcmanfm-qt";
