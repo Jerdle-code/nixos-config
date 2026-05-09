@@ -13,7 +13,11 @@
     '';
   };
   config = lib.mkIf config.local.daniel.desktop.hyprland.enable {
-    programs.hyprland.enable = true;
+    programs.hyprland = {
+      enable = true;
+      withUWSM = true; # recommended for most users
+      xwayland.enable = true; # Xwayland can be disabled.
+    };
     programs.hyprlock.enable = true;
     home-manager.users.daniel.programs.hyprlock = {
     enable = true;
@@ -125,11 +129,13 @@
     local.daniel.program.waybar.enable = true;
     home-manager.users.daniel.wayland.windowManager.hyprland = {
       enable = true;
+      systemd.enable = false;
       settings = {
         input = {
           "kb_layout" = "gb";
         };
-        "monitor" = ",preferred,auto,1";
+        "monitor" = "Technical Concepts Ltd Beyond TV,3840x2160@120,auto,1";
+        "monitor" =" name, addreserved, 460, 100, 100, 100"
         "$mod" = "SUPER";
         "$terminal" = "konsole";
         "$fileManager" = "pcmanfm-qt";
