@@ -134,7 +134,8 @@
         input = {
           "kb_layout" = "gb";
         };
-        "monitor" = "HDMI-A-1,3840x2160@120,auto,1";
+        "monitor" = ["HDMI-A-1,3840x2160@120,auto,1"
+        "HDMI-A-1,addreserved, 250, 25, 25, 25"];
         "$mod" = "SUPER";
         "$terminal" = "konsole";
         "$fileManager" = "pcmanfm-qt";
