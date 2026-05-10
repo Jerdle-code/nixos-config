@@ -127,6 +127,10 @@
     };
     local.daniel.desktop.none.enable = true;
     local.daniel.program.waybar.enable = true;
+    home-manager.users.daniel.xdg.portal={
+      enable = true;
+        extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    };
     home-manager.users.daniel.wayland.windowManager.hyprland = {
       enable = true;
       systemd.enable = false;
