@@ -171,6 +171,10 @@
           "ALT,Tab,cyclenext,"
           "ALT,Tab,bringactivetotop,"
           "ALT,Tab,changegroupactive,"
+          "$mod, left, workspace, -1"
+          "$mod, right, workspace, +1"
+          "$mod SHIFT, left, movetoworkspace, -1"
+          "$mod SHIFT, right, movetoworkspace, +1"
         ];
         bindm = [
           "$mod, mouse:272, movewindow"
