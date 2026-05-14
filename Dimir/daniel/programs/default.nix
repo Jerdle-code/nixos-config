@@ -12,4 +12,5 @@
     ./niri.nix
   ];
   local.daniel.desktop.hyprland.enable = true;
+  local.daniel.desktop.plasma.enable = true;
 }
