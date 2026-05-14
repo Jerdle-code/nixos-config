@@ -47,6 +47,11 @@
       device = "/dev/disk/by-uuid/F3EA-6845";
       fsType = "vfat";
     };
+    "/home/guest" = {
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "size=4G" ];
+    };
   };
 
   swapDevices = [
