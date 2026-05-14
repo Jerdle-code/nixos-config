@@ -21,6 +21,7 @@
     dive # look into docker image layers
     podman-tui # status of containers in the terminal
     podman-compose # start group of containers for dev
+    chromium #NixOS stupidly decided not to install Chromium when I passed "enable = true".
   ];
   security.polkit.enable = true;
   services = {
