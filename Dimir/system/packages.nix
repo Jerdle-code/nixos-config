@@ -21,7 +21,6 @@
     dive # look into docker image layers
     podman-tui # status of containers in the terminal
     podman-compose # start group of containers for dev
-    chromium
   ];
   security.polkit.enable = true;
   services = {
@@ -58,5 +57,9 @@
     partition-manager.enable = true;
     zsh.enable = true;
     gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+    chromium = {
+      enable = true;
+      extensions = ["ddkjiahejlhfcafbddmgiahcphecmpfh"];
+    };
   };
 }
