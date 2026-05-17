@@ -32,7 +32,6 @@
       pamixer
       pandoc
       python3
-      crystal-dock
       golly
       audacity
       nil
