@@ -1,7 +1,7 @@
 { ... }:
 {
   networking = {
-    hostName = "Dimir"; # Define your hostname.
+    hostName = "Golgari"; # Define your hostname.
     networkmanager.enable = true;
   };
   services = {

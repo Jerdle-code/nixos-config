@@ -47,7 +47,7 @@
         	  # Import the previous configuration.nix we used,
         	  # so the old configuration file still takes effect
         	 Golgari/system/default.nix
-         	 #Golgari/daniel/programs/default.nix
+         	 Golgari/daniel/programs/default.nix
          	 home-manager.nixosModules.home-manager
           	{
            	 home-manager = {
