@@ -14,6 +14,7 @@
     gvfs.enable = true;
     power-profiles-daemon.enable = true;
     openssh.enable = true;
+    xdg.portal.enable = true;
   };
   fonts.packages =
     with pkgs;
