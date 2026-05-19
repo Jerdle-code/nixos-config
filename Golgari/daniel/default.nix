@@ -4,7 +4,7 @@
 
 {
   imports = [
-#    ./packages.nix
-#    ./config.nix
+    ./packages.nix
+    ./config.nix
   ];
 }

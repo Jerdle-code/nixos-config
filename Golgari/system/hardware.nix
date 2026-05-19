@@ -24,8 +24,10 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  swapDevices = [ ];
-
+  swapDevices = [
+    { device = "/dev/disk/by-uuid/c1373cf4-c6c5-47f4-a5bb-efc1f187ab92"; }
+  ];
+  networking.useDHCP = lib.mkDefault true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
