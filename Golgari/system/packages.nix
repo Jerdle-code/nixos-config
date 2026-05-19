@@ -15,7 +15,7 @@
     power-profiles-daemon.enable = true;
     openssh.enable = true;
   };
-  xdg.portal = {enable = true; extraPortals = pkgs.xdg-desktop-portal-gtk;};
+  xdg.portal = {enable = true; extraPortals = [pkgs.xdg-desktop-portal-gtk];};
 
   fonts.packages =
     with pkgs;
