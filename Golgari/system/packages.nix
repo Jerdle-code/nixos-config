@@ -24,7 +24,6 @@
       powerline
     ]
     ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-  };
   programs = {
     dconf.enable = true;
     zsh.enable = true;
