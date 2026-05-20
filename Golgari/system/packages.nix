@@ -5,6 +5,7 @@
     nix-search-cli
     upower
     git
+    lua
   ];
   security.polkit.enable = true;
   services = {
