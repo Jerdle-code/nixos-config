@@ -7,7 +7,10 @@
   home.packages =
     (with pkgs; [
       libreoffice-still
-      firefox
+      chromium
+      fastfetch
+      conky
+      qterminal
     ])
     ++ (
       with lib.packagesFromDirectoryRecursive {
