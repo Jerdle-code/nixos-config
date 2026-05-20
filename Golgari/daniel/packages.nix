@@ -10,7 +10,7 @@
       chromium
       fastfetch
       conky
-      qterminal
+      kitty
     ])
     ++ (
       with lib.packagesFromDirectoryRecursive {
