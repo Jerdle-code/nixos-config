@@ -11,6 +11,7 @@
       fastfetch
       conky
       kitty
+      geany
     ])
     ++ (
       with lib.packagesFromDirectoryRecursive {
