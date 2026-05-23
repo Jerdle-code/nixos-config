@@ -12,6 +12,7 @@
       conky
       kitty
       geany
+      pcmanfm-qt
     ])
     ++ (
       with lib.packagesFromDirectoryRecursive {
