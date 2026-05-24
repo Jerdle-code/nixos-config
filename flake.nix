@@ -35,7 +35,7 @@
            	 home-manager = {
            	   useGlobalPkgs = true;
            	   useUserPackages = true;
-           	   users.daniel = import Dimir/daniel/default.nix;
+           	   users.daniel = import Rakdos/daniel/default.nix;
            	 };
          	 }
         	];
