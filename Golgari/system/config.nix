@@ -3,6 +3,7 @@
   networking = {
     hostName = "Golgari"; # Define your hostname.
     networkmanager.enable = true;
+    networkmanager.wifi.powersave = false;
   };
   services = {
     pulseaudio.enable = false;
