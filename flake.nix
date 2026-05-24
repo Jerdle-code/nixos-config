@@ -28,7 +28,7 @@
         	modules = [
         	  # Import the previous configuration.nix we used,
         	  # so the old configuration file still takes effect
-        	 Rakdosr/system/default.nix
+        	 Rakdos/system/default.nix
          	 Rakdos/daniel/programs/default.nix
          	 home-manager.nixosModules.home-manager
           	{
