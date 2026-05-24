@@ -21,23 +21,43 @@
       pkgs-unstable = import nixpkgs-unstable { inherit system; };
     in
     {
-      nixosConfigurations.Dimir = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit pkgs-unstable; };
-        modules = [
-          # Import the previous configuration.nix we used,
-          # so the old configuration file still takes effect
-          Dimir/system/default.nix
-          Dimir/daniel/programs/default.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.daniel = import Dimir/daniel/default.nix;
-            };
-          }
-        ];
-      };
+      nixosConfigurations = {
+	Dimir = nixpkgs.lib.nixosSystem {
+        	inherit system;
+        	specialArgs = { inherit pkgs-unstable; };
+        	modules = [
+        	  # Import the previous configuration.nix we used,
+        	  # so the old configuration file still takes effect
+        	  Dimir/system/default.nix
+         	 Dimir/daniel/programs/default.nix
+         	 home-manager.nixosModules.home-manager
+          	{
+           	 home-manager = {
+           	   useGlobalPkgs = true;
+           	   useUserPackages = true;
+           	   users.daniel = import Dimir/daniel/default.nix;
+           	 };
+         	 }
+        	];
+      		};
+	Golgari = nixpkgs.lib.nixosSystem {
+        	inherit system;
+        	specialArgs = { inherit pkgs-unstable; };
+        	modules = [
+        	  # Import the previous configuration.nix we used,
+        	  # so the old configuration file still takes effect
+        	 Golgari/system/default.nix
+         	 Golgari/daniel/programs/default.nix
+         	 home-manager.nixosModules.home-manager
+          	{
+           	 home-manager = {
+           	   useGlobalPkgs = true;
+           	   useUserPackages = true;
+           	   users.daniel = import Golgari/daniel/default.nix;
+           	 };
+         	 }
+        	];
+      		};
+	};
     };
 }
