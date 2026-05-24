@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   networking = {
     hostName = "Golgari"; # Define your hostname.
@@ -23,4 +23,5 @@
   boot.kernel.sysctl = {
     "net.ipv4.ip_forward" = 1;
   };
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 }
