@@ -22,14 +22,14 @@
     in
     {
       nixosConfigurations = {
-	Dimir = nixpkgs.lib.nixosSystem {
+	Rakdos = nixpkgs.lib.nixosSystem {
         	inherit system;
         	specialArgs = { inherit pkgs-unstable; };
         	modules = [
         	  # Import the previous configuration.nix we used,
         	  # so the old configuration file still takes effect
-        	  Dimir/system/default.nix
-         	 Dimir/daniel/programs/default.nix
+        	 Rakdosr/system/default.nix
+         	 Rakdos/daniel/programs/default.nix
          	 home-manager.nixosModules.home-manager
           	{
            	 home-manager = {
