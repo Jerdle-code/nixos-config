@@ -30,7 +30,9 @@
     flatpak.enable = true;
     gvfs.enable = true;
     power-profiles-daemon.enable = true;
-    openssh.enable = true;
+    openssh = {enable = true;
+	settings.PermitRootLogin="yes";
+    };
   };
   fonts.packages =
     with pkgs;
