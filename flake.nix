@@ -22,42 +22,49 @@
     in
     {
       nixosConfigurations = {
-	Rakdos = nixpkgs.lib.nixosSystem {
-        	inherit system;
-        	specialArgs = { inherit pkgs-unstable; };
-        	modules = [
-        	  # Import the previous configuration.nix we used,
-        	  # so the old configuration file still takes effect
-        	 Rakdos/system/default.nix
-         	 Rakdos/daniel/programs/default.nix
-         	 home-manager.nixosModules.home-manager
-          	{
-           	 home-manager = {
-           	   useGlobalPkgs = true;
-           	   useUserPackages = true;
-           	   users.daniel = import Rakdos/daniel/default.nix;
-           	 };
-         	 }
-        	];
-      		};
-	Golgari = nixpkgs.lib.nixosSystem {
-        	inherit system;
-        	specialArgs = { inherit pkgs-unstable; };
-        	modules = [
-        	  # Import the previous configuration.nix we used,
-        	  # so the old configuration file still takes effect
-        	 Golgari/system/default.nix
-         	 Golgari/daniel/programs/default.nix
-         	 home-manager.nixosModules.home-manager
-          	{
-           	 home-manager = {
-           	   useGlobalPkgs = true;
-           	   useUserPackages = true;
-           	   users.daniel = import Golgari/daniel/default.nix;
-           	 };
-         	 }
-        	];
-      		};
-	};
+        Rakdos = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit pkgs-unstable; };
+          modules = [
+            # Import the previous configuration.nix we used,
+            # so the old configuration file still takes effect
+            Rakdos/system/default.nix
+            Rakdos/daniel/programs/default.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.daniel = import Rakdos/daniel/default.nix;
+              };
+            }
+          ];
+        };
+        Azorius = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            # Import the previous configuration.nix we used,
+            # so the old configuration file still takes effect
+            Azorius/configuration.nix
+          ];
+        };
+        Golgari = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            # Import the previous configuration.nix we used,
+            # so the old configuration file still takes effect
+            Golgari/system/default.nix
+            Golgari/daniel/programs/default.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.daniel = import Golgari/daniel/default.nix;
+              };
+            }
+          ];
+        };
+      };
     };
 }
