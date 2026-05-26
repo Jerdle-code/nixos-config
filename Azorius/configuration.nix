@@ -143,7 +143,7 @@ services.pihole-ftl = {
 
 services.pihole-web = {
   enable = true;
-  ports = [ "443s" ];
+  ports = ["80" "443s" ];
 };
 }
 
