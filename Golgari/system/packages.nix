@@ -21,7 +21,6 @@
   };
   xdg.portal = {enable = true; extraPortals = [pkgs.xdg-desktop-portal-gtk];};
   ssh.askPassword = "lxqt-openssh-askpass";
-  
   fonts.packages =
     with pkgs;
     [
@@ -29,7 +28,7 @@
       lmodern
       font-awesome
       powerline
-    ]
+    ];
   programs = {
     dconf.enable = true;
     zsh.enable = true;
