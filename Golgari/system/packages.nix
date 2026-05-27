@@ -20,7 +20,6 @@
     openssh.enable = true;
   };
   xdg.portal = {enable = true; extraPortals = [pkgs.xdg-desktop-portal-gtk];};
-  ssh.askPassword = "lxqt-openssh-askpass";
   fonts.packages =
     with pkgs;
     [
@@ -33,6 +32,7 @@
     dconf.enable = true;
     zsh.enable = true;
     gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+    ssh.askPassword = "lxqt-openssh-askpass";
     chromium = {
       enable = true;
       extensions = ["ddkjiahejlhfcafbddmgiahcphecmpfh"];
