@@ -6,6 +6,9 @@
     upower
     git
     lua
+    lxqt.lxqt-openssh-askpass
+    lxqt.lxqt-policykit
+    chromium
   ];
   security.polkit.enable = true;
   services = {
@@ -17,7 +20,8 @@
     openssh.enable = true;
   };
   xdg.portal = {enable = true; extraPortals = [pkgs.xdg-desktop-portal-gtk];};
-
+  ssh.askPassword = "lxqt-openssh-askpass";
+  
   fonts.packages =
     with pkgs;
     [
@@ -26,10 +30,13 @@
       font-awesome
       powerline
     ]
-    ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   programs = {
     dconf.enable = true;
     zsh.enable = true;
     gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+    chromium = {
+      enable = true;
+      extensions = ["ddkjiahejlhfcafbddmgiahcphecmpfh"];
+    };
   };
 }
