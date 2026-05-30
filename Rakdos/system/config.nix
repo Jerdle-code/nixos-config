@@ -3,6 +3,7 @@
   networking = {
     hostName = "Rakdos"; # Define your hostname.
     networkmanager.enable = true;
+    wireless.enable = true;
   };
   services = {
     pulseaudio.enable = false;

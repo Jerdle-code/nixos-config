@@ -6,7 +6,6 @@
   lib,
   pkgs,
   modulesPath,
-  pkgs-unstable,
   ...
 }:
 
@@ -68,7 +67,7 @@
     };
     ckb-next = {
       enable = true;
-      package = pkgs-unstable.ckb-next;
+      package = pkgs.ckb-next;
     };
   };
   services.hardware.bolt.enable = true;

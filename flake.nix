@@ -2,10 +2,9 @@
   description = "My Nix config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs =
@@ -13,18 +12,15 @@
       self,
       nixpkgs,
       home-manager,
-      nixpkgs-unstable,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
-      pkgs-unstable = import nixpkgs-unstable { inherit system; };
     in
     {
       nixosConfigurations = {
         Rakdos = nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit pkgs-unstable; };
           modules = [
             # Import the previous configuration.nix we used,
             # so the old configuration file still takes effect
